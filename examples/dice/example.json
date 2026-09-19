@@ -1,0 +1,14 @@
+{
+  "id": "dice",
+  "title": "6. Electronic dice",
+  "description": "A fast counter stopped by a button picks a number from 1 to 6, and gate logic lights the right dots on a die face.",
+  "author": "Steven Slaa",
+  "group": "Projects",
+  "order": 6,
+  "tags": [
+    "sequential",
+    "counter",
+    "decoding"
+  ],
+  "entry": "dice.logic.json"
+}

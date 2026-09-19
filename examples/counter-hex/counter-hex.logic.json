@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 2,
+  "id": "example-counter-hex",
+  "name": "Counter",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "clk",
+          "type": "clock",
+          "label": "CLK",
+          "position": {
+            "x": 100,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "divide": 1
+          }
+        },
+        {
+          "id": "clear",
+          "type": "button",
+          "label": "CLEAR",
+          "position": {
+            "x": 100,
+            "y": 160
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "value": 0
+          }
+        },
+        {
+          "id": "ctr",
+          "type": "counter",
+          "label": "count",
+          "position": {
+            "x": 200,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "hex",
+          "type": "hex-display",
+          "label": "value",
+          "position": {
+            "x": 340,
+            "y": 90
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "carry",
+          "type": "led",
+          "label": "carry",
+          "position": {
+            "x": 340,
+            "y": 190
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 420,
+            "y": 90
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "The clock ticks on its own (see the\ntoolbar: Running, and the stopwatch).\nThe counter adds one on every rising edge,\n0 to F, then wraps to 0 and lights carry.\n\nHold CLEAR to reset it to 0.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 130,
+            "y": 110
+          },
+          "b": {
+            "x": 200,
+            "y": 110
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 130,
+            "y": 170
+          },
+          "b": {
+            "x": 170,
+            "y": 170
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 170,
+            "y": 130
+          },
+          "b": {
+            "x": 170,
+            "y": 170
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 170,
+            "y": 130
+          },
+          "b": {
+            "x": 200,
+            "y": 130
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 260,
+            "y": 120
+          },
+          "b": {
+            "x": 340,
+            "y": 120
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 260,
+            "y": 140
+          },
+          "b": {
+            "x": 300,
+            "y": 140
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 300,
+            "y": 140
+          },
+          "b": {
+            "x": 300,
+            "y": 200
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 300,
+            "y": 200
+          },
+          "b": {
+            "x": 340,
+            "y": 200
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": true,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

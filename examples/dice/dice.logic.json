@@ -1,0 +1,1174 @@
+{
+  "schemaVersion": 2,
+  "id": "example-dice",
+  "name": "Electronic dice",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "clk",
+          "type": "clock",
+          "label": "FAST CLOCK",
+          "position": {
+            "x": 60,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "divide": 1
+          }
+        },
+        {
+          "id": "roll",
+          "type": "button",
+          "label": "ROLL",
+          "position": {
+            "x": 160,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "value": 0
+          }
+        },
+        {
+          "id": "ctr",
+          "type": "counter",
+          "label": "count 0-5",
+          "position": {
+            "x": 200,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "t-wrap-in",
+          "type": "tunnel",
+          "label": "WRAP",
+          "position": {
+            "x": 140,
+            "y": 120
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "WRAP",
+            "width": 1
+          }
+        },
+        {
+          "id": "one",
+          "type": "constant",
+          "label": "",
+          "position": {
+            "x": 290,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "value": "1"
+          }
+        },
+        {
+          "id": "add",
+          "type": "adder",
+          "label": "+1",
+          "position": {
+            "x": 320,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4
+          }
+        },
+        {
+          "id": "hex",
+          "type": "hex-display",
+          "label": "face",
+          "position": {
+            "x": 440,
+            "y": 50
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "five",
+          "type": "constant",
+          "label": "",
+          "position": {
+            "x": 290,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "value": "5"
+          }
+        },
+        {
+          "id": "cmp",
+          "type": "comparator",
+          "label": "at 5?",
+          "position": {
+            "x": 320,
+            "y": 180
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4
+          }
+        },
+        {
+          "id": "t-wrap",
+          "type": "tunnel",
+          "label": "WRAP",
+          "position": {
+            "x": 400,
+            "y": 190
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "WRAP",
+            "width": 1
+          }
+        },
+        {
+          "id": "bits",
+          "type": "splitter",
+          "label": "",
+          "position": {
+            "x": 320,
+            "y": 260
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "fanout": 4
+          }
+        },
+        {
+          "id": "t-c0",
+          "type": "tunnel",
+          "label": "C0",
+          "position": {
+            "x": 400,
+            "y": 260
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "C0",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-c1",
+          "type": "tunnel",
+          "label": "C1",
+          "position": {
+            "x": 400,
+            "y": 290
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "C1",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-c2",
+          "type": "tunnel",
+          "label": "C2",
+          "position": {
+            "x": 400,
+            "y": 320
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "C2",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-a-c0",
+          "type": "tunnel",
+          "label": "C0",
+          "position": {
+            "x": 540,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "C0",
+            "width": 1
+          }
+        },
+        {
+          "id": "mid",
+          "type": "not",
+          "label": "odd face",
+          "position": {
+            "x": 600,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1
+          }
+        },
+        {
+          "id": "t-p1",
+          "type": "tunnel",
+          "label": "P1",
+          "position": {
+            "x": 660,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "P1",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-b-c0",
+          "type": "tunnel",
+          "label": "C0",
+          "position": {
+            "x": 540,
+            "y": 110
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "C0",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-b-c1",
+          "type": "tunnel",
+          "label": "C1",
+          "position": {
+            "x": 540,
+            "y": 130
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "C1",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-b-c2",
+          "type": "tunnel",
+          "label": "C2",
+          "position": {
+            "x": 540,
+            "y": 150
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "C2",
+            "width": 1
+          }
+        },
+        {
+          "id": "p2",
+          "type": "or",
+          "label": "face ≥ 2",
+          "position": {
+            "x": 600,
+            "y": 110
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 3,
+            "width": 1
+          }
+        },
+        {
+          "id": "t-p2",
+          "type": "tunnel",
+          "label": "P2",
+          "position": {
+            "x": 670,
+            "y": 130
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "P2",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-c-c1",
+          "type": "tunnel",
+          "label": "C1",
+          "position": {
+            "x": 540,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "C1",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-c-c0",
+          "type": "tunnel",
+          "label": "C0",
+          "position": {
+            "x": 540,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "C0",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-c-c2",
+          "type": "tunnel",
+          "label": "C2",
+          "position": {
+            "x": 600,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "C2",
+            "width": 1
+          }
+        },
+        {
+          "id": "p4-and",
+          "type": "and",
+          "label": "",
+          "position": {
+            "x": 600,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "p4",
+          "type": "or",
+          "label": "face ≥ 4",
+          "position": {
+            "x": 680,
+            "y": 210
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "t-p4",
+          "type": "tunnel",
+          "label": "P4",
+          "position": {
+            "x": 750,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "P4",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-d-c2",
+          "type": "tunnel",
+          "label": "C2",
+          "position": {
+            "x": 540,
+            "y": 290
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "C2",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-d-c0",
+          "type": "tunnel",
+          "label": "C0",
+          "position": {
+            "x": 540,
+            "y": 310
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "C0",
+            "width": 1
+          }
+        },
+        {
+          "id": "p6",
+          "type": "and",
+          "label": "face 6",
+          "position": {
+            "x": 600,
+            "y": 290
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "t-p6",
+          "type": "tunnel",
+          "label": "P6",
+          "position": {
+            "x": 670,
+            "y": 300
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "P6",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-pip-tl",
+          "type": "tunnel",
+          "label": "P2",
+          "position": {
+            "x": 810,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "P2",
+            "width": 1
+          }
+        },
+        {
+          "id": "pip-tl",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 860,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "t-pip-tr",
+          "type": "tunnel",
+          "label": "P4",
+          "position": {
+            "x": 1010,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "P4",
+            "width": 1
+          }
+        },
+        {
+          "id": "pip-tr",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 1060,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "t-pip-ml",
+          "type": "tunnel",
+          "label": "P6",
+          "position": {
+            "x": 810,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "P6",
+            "width": 1
+          }
+        },
+        {
+          "id": "pip-ml",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 860,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "t-pip-c",
+          "type": "tunnel",
+          "label": "P1",
+          "position": {
+            "x": 910,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "P1",
+            "width": 1
+          }
+        },
+        {
+          "id": "pip-c",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 960,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "t-pip-mr",
+          "type": "tunnel",
+          "label": "P6",
+          "position": {
+            "x": 1010,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "P6",
+            "width": 1
+          }
+        },
+        {
+          "id": "pip-mr",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 1060,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "t-pip-bl",
+          "type": "tunnel",
+          "label": "P4",
+          "position": {
+            "x": 810,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "P4",
+            "width": 1
+          }
+        },
+        {
+          "id": "pip-bl",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 860,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "t-pip-br",
+          "type": "tunnel",
+          "label": "P2",
+          "position": {
+            "x": 1010,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "P2",
+            "width": 1
+          }
+        },
+        {
+          "id": "pip-br",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 1060,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 810,
+            "y": 260
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Hold ROLL: the counter races through 0 to 5.\nLet go and it stops on one at random.\n\nThe gates on the left decide which dots each\nface lights; the hex digit shows the number.",
+            "color": "pink"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 110
+          },
+          "b": {
+            "x": 200,
+            "y": 110
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 180,
+            "y": 130
+          },
+          "b": {
+            "x": 200,
+            "y": 130
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 190,
+            "y": 210
+          },
+          "b": {
+            "x": 240,
+            "y": 210
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 240,
+            "y": 210
+          },
+          "b": {
+            "x": 240,
+            "y": 150
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 260,
+            "y": 120
+          },
+          "b": {
+            "x": 280,
+            "y": 120
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 280,
+            "y": 70
+          },
+          "b": {
+            "x": 280,
+            "y": 270
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 280,
+            "y": 70
+          },
+          "b": {
+            "x": 320,
+            "y": 70
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 280,
+            "y": 190
+          },
+          "b": {
+            "x": 320,
+            "y": 190
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 280,
+            "y": 270
+          },
+          "b": {
+            "x": 320,
+            "y": 270
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 370,
+            "y": 80
+          },
+          "b": {
+            "x": 440,
+            "y": 80
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 370,
+            "y": 200
+          },
+          "b": {
+            "x": 400,
+            "y": 200
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 340,
+            "y": 270
+          },
+          "b": {
+            "x": 400,
+            "y": 270
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 340,
+            "y": 280
+          },
+          "b": {
+            "x": 370,
+            "y": 280
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 370,
+            "y": 280
+          },
+          "b": {
+            "x": 370,
+            "y": 300
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 370,
+            "y": 300
+          },
+          "b": {
+            "x": 400,
+            "y": 300
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 340,
+            "y": 290
+          },
+          "b": {
+            "x": 360,
+            "y": 290
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 360,
+            "y": 290
+          },
+          "b": {
+            "x": 360,
+            "y": 330
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 360,
+            "y": 330
+          },
+          "b": {
+            "x": 400,
+            "y": 330
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 580,
+            "y": 70
+          },
+          "b": {
+            "x": 600,
+            "y": 70
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 640,
+            "y": 70
+          },
+          "b": {
+            "x": 660,
+            "y": 70
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 580,
+            "y": 120
+          },
+          "b": {
+            "x": 600,
+            "y": 120
+          }
+        },
+        {
+          "id": "w22",
+          "a": {
+            "x": 580,
+            "y": 140
+          },
+          "b": {
+            "x": 600,
+            "y": 140
+          }
+        },
+        {
+          "id": "w23",
+          "a": {
+            "x": 580,
+            "y": 160
+          },
+          "b": {
+            "x": 600,
+            "y": 160
+          }
+        },
+        {
+          "id": "w24",
+          "a": {
+            "x": 650,
+            "y": 140
+          },
+          "b": {
+            "x": 670,
+            "y": 140
+          }
+        },
+        {
+          "id": "w25",
+          "a": {
+            "x": 580,
+            "y": 210
+          },
+          "b": {
+            "x": 600,
+            "y": 210
+          }
+        },
+        {
+          "id": "w26",
+          "a": {
+            "x": 580,
+            "y": 230
+          },
+          "b": {
+            "x": 600,
+            "y": 230
+          }
+        },
+        {
+          "id": "w27",
+          "a": {
+            "x": 650,
+            "y": 220
+          },
+          "b": {
+            "x": 680,
+            "y": 220
+          }
+        },
+        {
+          "id": "w28",
+          "a": {
+            "x": 640,
+            "y": 250
+          },
+          "b": {
+            "x": 660,
+            "y": 250
+          }
+        },
+        {
+          "id": "w29",
+          "a": {
+            "x": 660,
+            "y": 240
+          },
+          "b": {
+            "x": 660,
+            "y": 250
+          }
+        },
+        {
+          "id": "w30",
+          "a": {
+            "x": 660,
+            "y": 240
+          },
+          "b": {
+            "x": 680,
+            "y": 240
+          }
+        },
+        {
+          "id": "w31",
+          "a": {
+            "x": 730,
+            "y": 230
+          },
+          "b": {
+            "x": 750,
+            "y": 230
+          }
+        },
+        {
+          "id": "w32",
+          "a": {
+            "x": 580,
+            "y": 300
+          },
+          "b": {
+            "x": 600,
+            "y": 300
+          }
+        },
+        {
+          "id": "w33",
+          "a": {
+            "x": 580,
+            "y": 320
+          },
+          "b": {
+            "x": 600,
+            "y": 320
+          }
+        },
+        {
+          "id": "w34",
+          "a": {
+            "x": 650,
+            "y": 310
+          },
+          "b": {
+            "x": 670,
+            "y": 310
+          }
+        },
+        {
+          "id": "w35",
+          "a": {
+            "x": 850,
+            "y": 90
+          },
+          "b": {
+            "x": 860,
+            "y": 90
+          }
+        },
+        {
+          "id": "w36",
+          "a": {
+            "x": 1050,
+            "y": 90
+          },
+          "b": {
+            "x": 1060,
+            "y": 90
+          }
+        },
+        {
+          "id": "w37",
+          "a": {
+            "x": 850,
+            "y": 150
+          },
+          "b": {
+            "x": 860,
+            "y": 150
+          }
+        },
+        {
+          "id": "w38",
+          "a": {
+            "x": 950,
+            "y": 150
+          },
+          "b": {
+            "x": 960,
+            "y": 150
+          }
+        },
+        {
+          "id": "w39",
+          "a": {
+            "x": 1050,
+            "y": 150
+          },
+          "b": {
+            "x": 1060,
+            "y": 150
+          }
+        },
+        {
+          "id": "w40",
+          "a": {
+            "x": 850,
+            "y": 210
+          },
+          "b": {
+            "x": 860,
+            "y": 210
+          }
+        },
+        {
+          "id": "w41",
+          "a": {
+            "x": 1050,
+            "y": 210
+          },
+          "b": {
+            "x": 1060,
+            "y": 210
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": true,
+    "tickFrequency": 32,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "accumulator",
+  "title": "5. Accumulator: a register that adds",
+  "description": "An 8-bit register feeding its own adder keeps a running total. The loop at the heart of the first computers.",
+  "author": "Steven Slaa",
+  "group": "Projects",
+  "order": 5,
+  "tags": [
+    "sequential",
+    "arithmetic",
+    "cpu"
+  ],
+  "entry": "accumulator.logic.json"
+}

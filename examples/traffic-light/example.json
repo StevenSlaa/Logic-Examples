@@ -1,0 +1,14 @@
+{
+  "id": "traffic-light",
+  "title": "4. Traffic light: a state machine",
+  "description": "A counter walks through four phases and a decoder with two OR gates turns each phase into lamps.",
+  "author": "Steven Slaa",
+  "group": "Memory and time",
+  "order": 4,
+  "tags": [
+    "sequential",
+    "clock",
+    "state-machine"
+  ],
+  "entry": "traffic-light.logic.json"
+}

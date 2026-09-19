@@ -1,0 +1,644 @@
+{
+  "schemaVersion": 2,
+  "id": "example-sequence-detector",
+  "name": "Sequence detector",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "bit",
+          "type": "pin-in",
+          "label": "BIT",
+          "position": {
+            "x": 60,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "step",
+          "type": "button",
+          "label": "STEP",
+          "position": {
+            "x": 60,
+            "y": 300
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "value": 0
+          }
+        },
+        {
+          "id": "notx",
+          "type": "not",
+          "label": "NOT BIT",
+          "position": {
+            "x": 160,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1
+          }
+        },
+        {
+          "id": "and3",
+          "type": "and",
+          "label": "saw 10, now 1",
+          "position": {
+            "x": 340,
+            "y": 160
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 3,
+            "width": 1
+          }
+        },
+        {
+          "id": "and2",
+          "type": "and",
+          "label": "saw 1, now 0",
+          "position": {
+            "x": 340,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "or",
+          "type": "or",
+          "label": "",
+          "position": {
+            "x": 420,
+            "y": 210
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "ff0",
+          "type": "dff",
+          "label": "Q0",
+          "position": {
+            "x": 500,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff1",
+          "type": "dff",
+          "label": "Q1",
+          "position": {
+            "x": 500,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "t-q0",
+          "type": "tunnel",
+          "label": "Q0",
+          "position": {
+            "x": 580,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "Q0",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-nq0",
+          "type": "tunnel",
+          "label": "NQ0",
+          "position": {
+            "x": 580,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "NQ0",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-q1",
+          "type": "tunnel",
+          "label": "Q1",
+          "position": {
+            "x": 580,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "name": "Q1",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-q1-in",
+          "type": "tunnel",
+          "label": "Q1",
+          "position": {
+            "x": 260,
+            "y": 180
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "Q1",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-nq0-in",
+          "type": "tunnel",
+          "label": "NQ0",
+          "position": {
+            "x": 260,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "NQ0",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-q0-in",
+          "type": "tunnel",
+          "label": "Q0",
+          "position": {
+            "x": 260,
+            "y": 260
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "Q0",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-q1-found",
+          "type": "tunnel",
+          "label": "Q1",
+          "position": {
+            "x": 640,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "Q1",
+            "width": 1
+          }
+        },
+        {
+          "id": "t-q0-found",
+          "type": "tunnel",
+          "label": "Q0",
+          "position": {
+            "x": 640,
+            "y": 160
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "name": "Q0",
+            "width": 1
+          }
+        },
+        {
+          "id": "found-and",
+          "type": "and",
+          "label": "state 3",
+          "position": {
+            "x": 700,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "found",
+          "type": "pin-out",
+          "label": "FOUND",
+          "position": {
+            "x": 790,
+            "y": 150
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 860,
+            "y": 150
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 60,
+            "y": 380
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Feed it bits one at a time: set BIT, press STEP.\nFOUND lights when the last three bits were 1, 0, 1.\n\nQ1 Q0 is the state: 00 nothing yet, 01 saw 1,\n10 saw 1 0, 11 saw 1 0 1.",
+            "color": "blue"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 90
+          },
+          "b": {
+            "x": 130,
+            "y": 90
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 130,
+            "y": 70
+          },
+          "b": {
+            "x": 130,
+            "y": 170
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 130,
+            "y": 70
+          },
+          "b": {
+            "x": 500,
+            "y": 70
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 130,
+            "y": 150
+          },
+          "b": {
+            "x": 160,
+            "y": 150
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 130,
+            "y": 170
+          },
+          "b": {
+            "x": 340,
+            "y": 170
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 200,
+            "y": 150
+          },
+          "b": {
+            "x": 220,
+            "y": 150
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 220,
+            "y": 150
+          },
+          "b": {
+            "x": 220,
+            "y": 250
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 220,
+            "y": 250
+          },
+          "b": {
+            "x": 340,
+            "y": 250
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 300,
+            "y": 190
+          },
+          "b": {
+            "x": 340,
+            "y": 190
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 300,
+            "y": 210
+          },
+          "b": {
+            "x": 340,
+            "y": 210
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 300,
+            "y": 270
+          },
+          "b": {
+            "x": 340,
+            "y": 270
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 390,
+            "y": 190
+          },
+          "b": {
+            "x": 400,
+            "y": 190
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 400,
+            "y": 190
+          },
+          "b": {
+            "x": 400,
+            "y": 220
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 400,
+            "y": 220
+          },
+          "b": {
+            "x": 420,
+            "y": 220
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 390,
+            "y": 260
+          },
+          "b": {
+            "x": 410,
+            "y": 260
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 410,
+            "y": 240
+          },
+          "b": {
+            "x": 410,
+            "y": 260
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 410,
+            "y": 240
+          },
+          "b": {
+            "x": 420,
+            "y": 240
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 470,
+            "y": 230
+          },
+          "b": {
+            "x": 500,
+            "y": 230
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 90,
+            "y": 310
+          },
+          "b": {
+            "x": 480,
+            "y": 310
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 480,
+            "y": 90
+          },
+          "b": {
+            "x": 480,
+            "y": 310
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 480,
+            "y": 90
+          },
+          "b": {
+            "x": 500,
+            "y": 90
+          }
+        },
+        {
+          "id": "w22",
+          "a": {
+            "x": 480,
+            "y": 250
+          },
+          "b": {
+            "x": 500,
+            "y": 250
+          }
+        },
+        {
+          "id": "w23",
+          "a": {
+            "x": 540,
+            "y": 70
+          },
+          "b": {
+            "x": 580,
+            "y": 70
+          }
+        },
+        {
+          "id": "w24",
+          "a": {
+            "x": 540,
+            "y": 90
+          },
+          "b": {
+            "x": 580,
+            "y": 90
+          }
+        },
+        {
+          "id": "w25",
+          "a": {
+            "x": 540,
+            "y": 230
+          },
+          "b": {
+            "x": 580,
+            "y": 230
+          }
+        },
+        {
+          "id": "w26",
+          "a": {
+            "x": 680,
+            "y": 150
+          },
+          "b": {
+            "x": 700,
+            "y": 150
+          }
+        },
+        {
+          "id": "w27",
+          "a": {
+            "x": 680,
+            "y": 170
+          },
+          "b": {
+            "x": 700,
+            "y": 170
+          }
+        },
+        {
+          "id": "w28",
+          "a": {
+            "x": 750,
+            "y": 160
+          },
+          "b": {
+            "x": 790,
+            "y": 160
+          }
+        },
+        {
+          "id": "w29",
+          "a": {
+            "x": 790,
+            "y": 160
+          },
+          "b": {
+            "x": 860,
+            "y": 160
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

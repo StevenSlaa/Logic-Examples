@@ -1,0 +1,503 @@
+{
+  "schema": "pulsar.logic.library/v1",
+  "catalog": {
+    "id": "logic-examples",
+    "name": "Logic Lab Examples",
+    "version": "1.0.0"
+  },
+  "repository": "https://github.com/StevenSlaa/Logic-Examples",
+  "groups": [
+    {
+      "name": "Basics",
+      "description": "Four short circuits, in order. Start here if you have never met a logic gate."
+    },
+    {
+      "name": "Arithmetic",
+      "description": "Adding numbers with gates, one binary column at a time."
+    },
+    {
+      "name": "Choosing and routing",
+      "description": "Circuits that pick one signal out of several, or point at one output."
+    },
+    {
+      "name": "Memory and time",
+      "description": "Circuits that remember, and circuits that move on with a clock."
+    },
+    {
+      "name": "Projects",
+      "description": "Bigger circuits that combine everything before them. Each is a small machine: take it one part at a time."
+    }
+  ],
+  "examples": [
+    {
+      "id": "basic-gates",
+      "title": "1. The basic gates",
+      "description": "Seven gates side by side, all fed from the same two inputs. The whole vocabulary of digital logic on one sheet.",
+      "author": "Steven Slaa",
+      "group": "Basics",
+      "tags": [
+        "combinational",
+        "gates"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/basic-gates",
+      "circuit": {
+        "path": "basic-gates.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/basic-gates/basic-gates.logic.json",
+        "sha256": "11cfd00bad65ef9423040780f05bce3eb6b87cc7dbf304b960dde7145e49e544",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/basic-gates/README.md",
+        "sha256": "ab19702c8a71511d639708f757f642211b335d171213c6ec74e78c458178528d",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "de-morgan",
+      "title": "2. De Morgan's laws",
+      "description": "Two circuits built from different gates that always give the same answer. How to swap AND for OR by inverting.",
+      "author": "Steven Slaa",
+      "group": "Basics",
+      "tags": [
+        "combinational",
+        "gates",
+        "boolean-algebra"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/de-morgan",
+      "circuit": {
+        "path": "de-morgan.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/de-morgan/de-morgan.logic.json",
+        "sha256": "34933e62217d9bbea551bdf7727b0a6fadc798cd7ea2aab7c99c794275aa73cf",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/de-morgan/README.md",
+        "sha256": "be156605894ac0c0c5249f6c0b4e1cc7500781c6fcfd0a48ee5da142d664f25e",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "nand-only",
+      "title": "3. Everything from NAND",
+      "description": "NOT, AND and OR built out of nothing but NAND gates, which is why a chip factory only really needs one gate.",
+      "author": "Steven Slaa",
+      "group": "Basics",
+      "tags": [
+        "combinational",
+        "gates",
+        "nand"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/nand-only",
+      "circuit": {
+        "path": "nand-only.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/nand-only/nand-only.logic.json",
+        "sha256": "ec04224e7270ede83907a21e84733f9d80dda529aba9f6949a06ea30cf9071fa",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/nand-only/README.md",
+        "sha256": "0b7a3110320383daff40326bbbc3b6bb699ba3de5790b88a0831b69f3e5dd594",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "majority-vote",
+      "title": "4. Majority vote: from truth table to circuit",
+      "description": "Three inputs, and the output agrees with the majority. How to turn a truth table into gates, step by step.",
+      "author": "Steven Slaa",
+      "group": "Basics",
+      "tags": [
+        "combinational",
+        "sum-of-products"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/majority-vote",
+      "circuit": {
+        "path": "majority-vote.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/majority-vote/majority-vote.logic.json",
+        "sha256": "d8d781d415becfb424b6ee9d2a00bdab9c1068edbc4cdccb78b2ed07a1087a0e",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/majority-vote/README.md",
+        "sha256": "598d0e1c3f1ceae87b401e9c28d0d032a830a35ecadeca93faeb411f27a30685",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "half-adder",
+      "title": "1. Half adder",
+      "description": "Adds two single bits. XOR makes the sum digit and AND makes the carry: binary addition in two gates.",
+      "author": "Steven Slaa",
+      "group": "Arithmetic",
+      "tags": [
+        "combinational",
+        "arithmetic"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/half-adder",
+      "circuit": {
+        "path": "half-adder.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/half-adder/half-adder.logic.json",
+        "sha256": "1623e555a33fc784caf2b7e78fc4a0f4be2be7253d978e43268969f382e96685",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/half-adder/README.md",
+        "sha256": "e11bed9a408b1cac3e90137cd8df5e3f86729dadb85f3263029485019296dd09",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "full-adder",
+      "title": "2. Full adder",
+      "description": "Adds two bits plus a carry from the column before. Chain these and you can add numbers of any length.",
+      "author": "Steven Slaa",
+      "group": "Arithmetic",
+      "tags": [
+        "combinational",
+        "arithmetic"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/full-adder",
+      "circuit": {
+        "path": "full-adder.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/full-adder/full-adder.logic.json",
+        "sha256": "9ee2b6f9ac4468ea665c5083cb8313536e563fa39b2f384d75d956a81d0477d1",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/full-adder/README.md",
+        "sha256": "622f03a7b0eab7fcd7569debb81a5cb0abeef023e808dc711dda14c97ea42ebb",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "four-bit-adder",
+      "title": "3. Adding 4-bit numbers",
+      "description": "The Adder part on 4-bit buses, with a hex display and the carry out. What a ripple of full adders looks like from the outside.",
+      "author": "Steven Slaa",
+      "group": "Arithmetic",
+      "tags": [
+        "combinational",
+        "arithmetic",
+        "buses"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/four-bit-adder",
+      "circuit": {
+        "path": "four-bit-adder.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/four-bit-adder/four-bit-adder.logic.json",
+        "sha256": "94d861daf4c8f0b686f0d156802265bf1f628da81a4895da62cb81792c465cda",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/four-bit-adder/README.md",
+        "sha256": "22ee34d7275e1d872e8336097e258085ad07f16e674e5f0960cd3a217021522a",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "mux-from-gates",
+      "title": "1. Multiplexer",
+      "description": "A select line chooses which of two inputs reaches the output, built from gates and then again with the Multiplexer part.",
+      "author": "Steven Slaa",
+      "group": "Choosing and routing",
+      "tags": [
+        "combinational",
+        "plexers"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/mux-from-gates",
+      "circuit": {
+        "path": "mux-from-gates.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/mux-from-gates/mux-from-gates.logic.json",
+        "sha256": "991c0b17b4a23b841b8737c5b69e7c9c94202bef24a68ef70132ad4945c941a3",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/mux-from-gates/README.md",
+        "sha256": "e84dbb4c4c79531d4c20e1bd026e7247e8bc0376477a21a1470724df71b247b4",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "decoder-leds",
+      "title": "2. Decoder: binary to one-hot",
+      "description": "A 2-bit number lights exactly one of four LEDs. The part that turns an address into 'this one'.",
+      "author": "Steven Slaa",
+      "group": "Choosing and routing",
+      "tags": [
+        "combinational",
+        "plexers"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/decoder-leds",
+      "circuit": {
+        "path": "decoder-leds.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/decoder-leds/decoder-leds.logic.json",
+        "sha256": "09e31be2af00aab438ecb456cef1dce865785f41b51560a5dfedc49bb35c49c6",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/decoder-leds/README.md",
+        "sha256": "d46de914e283d42b859aa10ac0a9f2eb5c38d4e986f3dd200916c56c1aee58b3",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "sr-latch",
+      "title": "1. SR latch: a circuit that remembers",
+      "description": "Two NOR gates feeding each other hold a bit after the input goes away. Where memory comes from.",
+      "author": "Steven Slaa",
+      "group": "Memory and time",
+      "tags": [
+        "sequential",
+        "memory"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/sr-latch",
+      "circuit": {
+        "path": "sr-latch.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/sr-latch/sr-latch.logic.json",
+        "sha256": "a1a955dd6b8bec580104ca46aefef6966a8cdbf0ed64ef71e1ef8ac80c194518",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/sr-latch/README.md",
+        "sha256": "9677e7552ce9b315bb777c7a9cb3cb8d7023c3d4690bd6243f0a8618bbd2908c",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "d-flip-flop",
+      "title": "2. D flip-flop: remembering on a clock edge",
+      "description": "Copies its input only at the instant the clock rises. The building block of every register and every CPU.",
+      "author": "Steven Slaa",
+      "group": "Memory and time",
+      "tags": [
+        "sequential",
+        "memory",
+        "clock"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/d-flip-flop",
+      "circuit": {
+        "path": "d-flip-flop.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/d-flip-flop/d-flip-flop.logic.json",
+        "sha256": "50c510e6b290a8eb578ddd6ae337bc5d5545a842ea385736b80130dbe582281f",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/d-flip-flop/README.md",
+        "sha256": "342c62a81b805cc63f649b91e426fced343365f2ce8d2ddb8620e4d4f799a6e6",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "counter-hex",
+      "title": "3. Counter and hex display",
+      "description": "A clock drives a 4-bit counter, shown on a hex digit, with a clear button and a carry LED.",
+      "author": "Steven Slaa",
+      "group": "Memory and time",
+      "tags": [
+        "sequential",
+        "clock",
+        "counter"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/counter-hex",
+      "circuit": {
+        "path": "counter-hex.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/counter-hex/counter-hex.logic.json",
+        "sha256": "f5503f8519b8a2e747409ab5be77ddfe5ff547738258faeed2475b4e2542c4c8",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/counter-hex/README.md",
+        "sha256": "8b1eb7080e80f07ff5e651d3aeadb14db6704ea4b94ceb2340c3e6f3f518fa80",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "traffic-light",
+      "title": "4. Traffic light: a state machine",
+      "description": "A counter walks through four phases and a decoder with two OR gates turns each phase into lamps.",
+      "author": "Steven Slaa",
+      "group": "Memory and time",
+      "tags": [
+        "sequential",
+        "clock",
+        "state-machine"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/traffic-light",
+      "circuit": {
+        "path": "traffic-light.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/traffic-light/traffic-light.logic.json",
+        "sha256": "3eefc7ca567fa119249469ce401cbc831d7433d12cd1c5c801cfc83cc086299b",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/traffic-light/README.md",
+        "sha256": "66873b6d3277e9f956ff9ff167f0b2cf4d034b696450d02960bd274267de4b31",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "ripple-carry-adder",
+      "title": "1. Ripple-carry adder from gates",
+      "description": "Four full adders, twenty gates, one 4-bit adder. Splitters take the buses apart, tunnels carry the bits, and the carry passes from adder to adder.",
+      "author": "Steven Slaa",
+      "group": "Projects",
+      "tags": [
+        "combinational",
+        "arithmetic",
+        "buses",
+        "tunnels"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/ripple-carry-adder",
+      "circuit": {
+        "path": "ripple-carry-adder.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/ripple-carry-adder/ripple-carry-adder.logic.json",
+        "sha256": "32fd59e75ff3c14629ca98b23760f7b2ebee04f1c446203568d895c4e201c255",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/ripple-carry-adder/README.md",
+        "sha256": "89b77141b885b7a4a6315e6875ab3d18b3df45efed2b4eea60d471f9fb126515",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "alu",
+      "title": "2. A 4-bit ALU",
+      "description": "Add, subtract, AND and OR on two 4-bit numbers, picked by an opcode, with zero, carry and borrow flags. The arithmetic heart of a processor.",
+      "author": "Steven Slaa",
+      "group": "Projects",
+      "tags": [
+        "combinational",
+        "arithmetic",
+        "plexers",
+        "cpu"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/alu",
+      "circuit": {
+        "path": "alu.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/alu/alu.logic.json",
+        "sha256": "d7ca1b7b686dff62315169c58e04df702691ca923953b09581dd44134e357876",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/alu/README.md",
+        "sha256": "7eb17ccc263312287dfb89da9a5e4bad2b6bf414206858036a57526fceb1551f",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "shift-register",
+      "title": "3. Shift register: serial in, parallel out",
+      "description": "Four D flip-flops in a chain move every bit one place along on each clock. How one wire can deliver a whole number.",
+      "author": "Steven Slaa",
+      "group": "Projects",
+      "tags": [
+        "sequential",
+        "memory",
+        "clock"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/shift-register",
+      "circuit": {
+        "path": "shift-register.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/shift-register/shift-register.logic.json",
+        "sha256": "4e8f7f7540d911e698a9e9d464d7b5b2ad325549f17fa4ad9612912a16e9c021",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/shift-register/README.md",
+        "sha256": "358e6d1166b19835d64fc6658305d1ab3489579d9e8675714b64cb365aa53508",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "sequence-detector",
+      "title": "4. Sequence detector: a finite-state machine",
+      "description": "Watches a stream of bits and lights up when it has just seen 1, 0, 1. Designing a state machine from a state table, step by step.",
+      "author": "Steven Slaa",
+      "group": "Projects",
+      "tags": [
+        "sequential",
+        "state-machine",
+        "design"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/sequence-detector",
+      "circuit": {
+        "path": "sequence-detector.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/sequence-detector/sequence-detector.logic.json",
+        "sha256": "f1616933dfa0e4f20ac7523929bacb67351bea864ca00561c5567213136fcf6d",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/sequence-detector/README.md",
+        "sha256": "dea9255573af032384819a638122a44e2c7e4ade74c0c3395ae60d6dce20aa31",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "accumulator",
+      "title": "5. Accumulator: a register that adds",
+      "description": "An 8-bit register feeding its own adder keeps a running total. The loop at the heart of the first computers.",
+      "author": "Steven Slaa",
+      "group": "Projects",
+      "tags": [
+        "sequential",
+        "arithmetic",
+        "cpu"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/accumulator",
+      "circuit": {
+        "path": "accumulator.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/accumulator/accumulator.logic.json",
+        "sha256": "abede274c5abf465cad69df57c577ca51b908bc5c9b643a83eda1a38d6ac6a1c",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/accumulator/README.md",
+        "sha256": "1441364541ae74cc893b5735e0a942ef6d980a7a3032ab73cb154055a7bd5698",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "dice",
+      "title": "6. Electronic dice",
+      "description": "A fast counter stopped by a button picks a number from 1 to 6, and gate logic lights the right dots on a die face.",
+      "author": "Steven Slaa",
+      "group": "Projects",
+      "tags": [
+        "sequential",
+        "counter",
+        "decoding"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/dice",
+      "circuit": {
+        "path": "dice.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/dice/dice.logic.json",
+        "sha256": "4a6bfcaa26b7f1d338edba789a9e2a7d170a640e06af7177e5357c9e1dab5b02",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/dice/README.md",
+        "sha256": "55119095f7d57162046257581025cf54a6175f4873412a655de16fe3eb6601d7",
+        "mime": "text/markdown"
+      }
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 2,
+  "id": "example-majority-vote",
+  "name": "Majority vote",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "a",
+          "type": "pin-in",
+          "label": "A",
+          "position": {
+            "x": 60,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "b",
+          "type": "pin-in",
+          "label": "B",
+          "position": {
+            "x": 60,
+            "y": 160
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "c",
+          "type": "pin-in",
+          "label": "C",
+          "position": {
+            "x": 60,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "ab",
+          "type": "and",
+          "label": "A·B",
+          "position": {
+            "x": 260,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "ac",
+          "type": "and",
+          "label": "A·C",
+          "position": {
+            "x": 260,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "bc",
+          "type": "and",
+          "label": "B·C",
+          "position": {
+            "x": 260,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "or",
+          "type": "or",
+          "label": "",
+          "position": {
+            "x": 380,
+            "y": 130
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 3,
+            "width": 1
+          }
+        },
+        {
+          "id": "out",
+          "type": "pin-out",
+          "label": "MAJORITY",
+          "position": {
+            "x": 490,
+            "y": 150
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 560,
+            "y": 150
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 60,
+            "y": 310
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Three voters, one answer: the output is 1\nwhen at least two of A, B and C are 1.\n\nEach AND gate spots one pair that agrees;\nthe OR says yes if any pair does.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 70
+          },
+          "b": {
+            "x": 140,
+            "y": 70
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 140,
+            "y": 70
+          },
+          "b": {
+            "x": 140,
+            "y": 150
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 140,
+            "y": 70
+          },
+          "b": {
+            "x": 260,
+            "y": 70
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 140,
+            "y": 150
+          },
+          "b": {
+            "x": 260,
+            "y": 150
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 90,
+            "y": 170
+          },
+          "b": {
+            "x": 180,
+            "y": 170
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 180,
+            "y": 90
+          },
+          "b": {
+            "x": 180,
+            "y": 230
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 180,
+            "y": 90
+          },
+          "b": {
+            "x": 260,
+            "y": 90
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 180,
+            "y": 230
+          },
+          "b": {
+            "x": 260,
+            "y": 230
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 90,
+            "y": 250
+          },
+          "b": {
+            "x": 220,
+            "y": 250
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 220,
+            "y": 170
+          },
+          "b": {
+            "x": 220,
+            "y": 250
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 220,
+            "y": 170
+          },
+          "b": {
+            "x": 260,
+            "y": 170
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 220,
+            "y": 250
+          },
+          "b": {
+            "x": 260,
+            "y": 250
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 310,
+            "y": 80
+          },
+          "b": {
+            "x": 340,
+            "y": 80
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 340,
+            "y": 80
+          },
+          "b": {
+            "x": 340,
+            "y": 140
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 340,
+            "y": 140
+          },
+          "b": {
+            "x": 380,
+            "y": 140
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 310,
+            "y": 160
+          },
+          "b": {
+            "x": 380,
+            "y": 160
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 310,
+            "y": 240
+          },
+          "b": {
+            "x": 350,
+            "y": 240
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 350,
+            "y": 180
+          },
+          "b": {
+            "x": 350,
+            "y": 240
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 350,
+            "y": 180
+          },
+          "b": {
+            "x": 380,
+            "y": 180
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 490,
+            "y": 160
+          },
+          "b": {
+            "x": 560,
+            "y": 160
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 430,
+            "y": 160
+          },
+          "b": {
+            "x": 490,
+            "y": 160
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

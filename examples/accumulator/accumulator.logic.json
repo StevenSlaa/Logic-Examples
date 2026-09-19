@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 2,
+  "id": "example-accumulator",
+  "name": "Accumulator",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "in",
+          "type": "pin-in",
+          "label": "IN",
+          "position": {
+            "x": 60,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 8,
+            "value": 5,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "add",
+          "type": "adder",
+          "label": "total + IN",
+          "position": {
+            "x": 220,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 8
+          }
+        },
+        {
+          "id": "reg",
+          "type": "register",
+          "label": "total",
+          "position": {
+            "x": 360,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 8,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "total",
+          "type": "pin-out",
+          "label": "TOTAL",
+          "position": {
+            "x": 480,
+            "y": 70
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 8,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "show",
+          "type": "value-display",
+          "label": "",
+          "position": {
+            "x": 560,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 8,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "addb",
+          "type": "button",
+          "label": "ADD",
+          "position": {
+            "x": 200,
+            "y": 180
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "value": 0
+          }
+        },
+        {
+          "id": "clear",
+          "type": "button",
+          "label": "CLEAR",
+          "position": {
+            "x": 200,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "value": 0
+          }
+        },
+        {
+          "id": "or",
+          "type": "or",
+          "label": "either",
+          "position": {
+            "x": 270,
+            "y": 180
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 420,
+            "y": 180
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Set IN, then press ADD: IN is added to the total.\nPress ADD again and it is added again.\nCLEAR sets the total back to 0.\n\nThe register feeds its own adder: that loop\nis the accumulator at the heart of early CPUs.",
+            "color": "green"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 100,
+            "y": 70
+          },
+          "b": {
+            "x": 220,
+            "y": 70
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 270,
+            "y": 80
+          },
+          "b": {
+            "x": 310,
+            "y": 80
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 310,
+            "y": 70
+          },
+          "b": {
+            "x": 310,
+            "y": 80
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 310,
+            "y": 70
+          },
+          "b": {
+            "x": 360,
+            "y": 70
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 420,
+            "y": 80
+          },
+          "b": {
+            "x": 480,
+            "y": 80
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 480,
+            "y": 80
+          },
+          "b": {
+            "x": 560,
+            "y": 80
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 450,
+            "y": 80
+          },
+          "b": {
+            "x": 450,
+            "y": 150
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 450,
+            "y": 150
+          },
+          "b": {
+            "x": 200,
+            "y": 150
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 200,
+            "y": 150
+          },
+          "b": {
+            "x": 200,
+            "y": 90
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 200,
+            "y": 90
+          },
+          "b": {
+            "x": 220,
+            "y": 90
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 230,
+            "y": 190
+          },
+          "b": {
+            "x": 270,
+            "y": 190
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 230,
+            "y": 250
+          },
+          "b": {
+            "x": 250,
+            "y": 250
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 250,
+            "y": 250
+          },
+          "b": {
+            "x": 250,
+            "y": 210
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 250,
+            "y": 210
+          },
+          "b": {
+            "x": 270,
+            "y": 210
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 250,
+            "y": 250
+          },
+          "b": {
+            "x": 340,
+            "y": 250
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 340,
+            "y": 250
+          },
+          "b": {
+            "x": 340,
+            "y": 110
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 340,
+            "y": 110
+          },
+          "b": {
+            "x": 360,
+            "y": 110
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 320,
+            "y": 200
+          },
+          "b": {
+            "x": 330,
+            "y": 200
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 330,
+            "y": 90
+          },
+          "b": {
+            "x": 330,
+            "y": 200
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 330,
+            "y": 90
+          },
+          "b": {
+            "x": 360,
+            "y": 90
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

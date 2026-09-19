@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 2,
+  "id": "example-sr-latch",
+  "name": "SR latch",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "r",
+          "type": "pin-in",
+          "label": "R",
+          "position": {
+            "x": 60,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "s",
+          "type": "pin-in",
+          "label": "S",
+          "position": {
+            "x": 60,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "nor1",
+          "type": "nor",
+          "label": "",
+          "position": {
+            "x": 220,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "nor2",
+          "type": "nor",
+          "label": "",
+          "position": {
+            "x": 220,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "q",
+          "type": "pin-out",
+          "label": "Q",
+          "position": {
+            "x": 380,
+            "y": 70
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "qn",
+          "type": "pin-out",
+          "label": "NOT Q",
+          "position": {
+            "x": 380,
+            "y": 230
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 450,
+            "y": 70
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 520,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Pulse S (on, then off): Q turns on and stays on.\nPulse R: Q turns off and stays off.\n\nEach gate's output feeds the other one's input.\nThat loop is the memory.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 70
+          },
+          "b": {
+            "x": 220,
+            "y": 70
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 90,
+            "y": 250
+          },
+          "b": {
+            "x": 220,
+            "y": 250
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 270,
+            "y": 80
+          },
+          "b": {
+            "x": 380,
+            "y": 80
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 380,
+            "y": 80
+          },
+          "b": {
+            "x": 450,
+            "y": 80
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 300,
+            "y": 80
+          },
+          "b": {
+            "x": 300,
+            "y": 140
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 300,
+            "y": 140
+          },
+          "b": {
+            "x": 190,
+            "y": 140
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 190,
+            "y": 140
+          },
+          "b": {
+            "x": 190,
+            "y": 230
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 190,
+            "y": 230
+          },
+          "b": {
+            "x": 220,
+            "y": 230
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 270,
+            "y": 240
+          },
+          "b": {
+            "x": 380,
+            "y": 240
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 320,
+            "y": 240
+          },
+          "b": {
+            "x": 320,
+            "y": 110
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 320,
+            "y": 110
+          },
+          "b": {
+            "x": 200,
+            "y": 110
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 200,
+            "y": 110
+          },
+          "b": {
+            "x": 200,
+            "y": 90
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 200,
+            "y": 90
+          },
+          "b": {
+            "x": 220,
+            "y": 90
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

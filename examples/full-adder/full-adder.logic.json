@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 2,
+  "id": "example-full-adder",
+  "name": "Full adder",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "a",
+          "type": "pin-in",
+          "label": "A",
+          "position": {
+            "x": 60,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "b",
+          "type": "pin-in",
+          "label": "B",
+          "position": {
+            "x": 60,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "cin",
+          "type": "pin-in",
+          "label": "CIN",
+          "position": {
+            "x": 60,
+            "y": 300
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "xor1",
+          "type": "xor",
+          "label": "A XOR B",
+          "position": {
+            "x": 240,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "and1",
+          "type": "and",
+          "label": "A AND B",
+          "position": {
+            "x": 240,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "xor2",
+          "type": "xor",
+          "label": "sum",
+          "position": {
+            "x": 400,
+            "y": 70
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "and2",
+          "type": "and",
+          "label": "carry through",
+          "position": {
+            "x": 400,
+            "y": 260
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "or",
+          "type": "or",
+          "label": "carry",
+          "position": {
+            "x": 520,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "sum",
+          "type": "pin-out",
+          "label": "SUM",
+          "position": {
+            "x": 520,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "cout",
+          "type": "pin-out",
+          "label": "COUT",
+          "position": {
+            "x": 630,
+            "y": 230
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 60,
+            "y": 360
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Two half adders and an OR.\nThe first adds A and B; the second adds the\ncarry that came in from the column before.\nCOUT is 1 when either of them overflowed.",
+            "color": "blue"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 70
+          },
+          "b": {
+            "x": 150,
+            "y": 70
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 150,
+            "y": 70
+          },
+          "b": {
+            "x": 150,
+            "y": 210
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 150,
+            "y": 70
+          },
+          "b": {
+            "x": 240,
+            "y": 70
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 150,
+            "y": 210
+          },
+          "b": {
+            "x": 240,
+            "y": 210
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 90,
+            "y": 150
+          },
+          "b": {
+            "x": 190,
+            "y": 150
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 190,
+            "y": 90
+          },
+          "b": {
+            "x": 190,
+            "y": 230
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 190,
+            "y": 90
+          },
+          "b": {
+            "x": 240,
+            "y": 90
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 190,
+            "y": 230
+          },
+          "b": {
+            "x": 240,
+            "y": 230
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 90,
+            "y": 310
+          },
+          "b": {
+            "x": 360,
+            "y": 310
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 360,
+            "y": 100
+          },
+          "b": {
+            "x": 360,
+            "y": 310
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 360,
+            "y": 100
+          },
+          "b": {
+            "x": 400,
+            "y": 100
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 360,
+            "y": 290
+          },
+          "b": {
+            "x": 400,
+            "y": 290
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 290,
+            "y": 80
+          },
+          "b": {
+            "x": 330,
+            "y": 80
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 330,
+            "y": 80
+          },
+          "b": {
+            "x": 330,
+            "y": 270
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 330,
+            "y": 80
+          },
+          "b": {
+            "x": 400,
+            "y": 80
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 330,
+            "y": 270
+          },
+          "b": {
+            "x": 400,
+            "y": 270
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 290,
+            "y": 220
+          },
+          "b": {
+            "x": 480,
+            "y": 220
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 480,
+            "y": 220
+          },
+          "b": {
+            "x": 480,
+            "y": 230
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 480,
+            "y": 230
+          },
+          "b": {
+            "x": 520,
+            "y": 230
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 450,
+            "y": 280
+          },
+          "b": {
+            "x": 490,
+            "y": 280
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 490,
+            "y": 250
+          },
+          "b": {
+            "x": 490,
+            "y": 280
+          }
+        },
+        {
+          "id": "w22",
+          "a": {
+            "x": 490,
+            "y": 250
+          },
+          "b": {
+            "x": 520,
+            "y": 250
+          }
+        },
+        {
+          "id": "w23",
+          "a": {
+            "x": 450,
+            "y": 90
+          },
+          "b": {
+            "x": 520,
+            "y": 90
+          }
+        },
+        {
+          "id": "w24",
+          "a": {
+            "x": 570,
+            "y": 240
+          },
+          "b": {
+            "x": 630,
+            "y": 240
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

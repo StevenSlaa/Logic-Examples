@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 2,
+  "id": "example-decoder-leds",
+  "name": "Decoder",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "sel",
+          "type": "pin-in",
+          "label": "SEL",
+          "position": {
+            "x": 60,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 2,
+            "value": 0,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "dec",
+          "type": "decoder",
+          "label": "",
+          "position": {
+            "x": 200,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "select": 2
+          }
+        },
+        {
+          "id": "led0",
+          "type": "led",
+          "label": "Y0",
+          "position": {
+            "x": 340,
+            "y": 50
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "led1",
+          "type": "led",
+          "label": "Y1",
+          "position": {
+            "x": 340,
+            "y": 90
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "led2",
+          "type": "led",
+          "label": "Y2",
+          "position": {
+            "x": 340,
+            "y": 130
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "led3",
+          "type": "led",
+          "label": "Y3",
+          "position": {
+            "x": 340,
+            "y": 170
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 420,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "SEL is a 2-bit number, 0 to 3.\nClick it to count up: exactly one LED is lit,\nthe one whose number SEL holds.\n\nThat is a decoder: binary in, one-hot out.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 210
+          },
+          "b": {
+            "x": 220,
+            "y": 210
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 220,
+            "y": 210
+          },
+          "b": {
+            "x": 220,
+            "y": 140
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 240,
+            "y": 70
+          },
+          "b": {
+            "x": 300,
+            "y": 70
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 300,
+            "y": 60
+          },
+          "b": {
+            "x": 300,
+            "y": 70
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 300,
+            "y": 60
+          },
+          "b": {
+            "x": 340,
+            "y": 60
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 240,
+            "y": 90
+          },
+          "b": {
+            "x": 290,
+            "y": 90
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 290,
+            "y": 90
+          },
+          "b": {
+            "x": 290,
+            "y": 100
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 290,
+            "y": 100
+          },
+          "b": {
+            "x": 340,
+            "y": 100
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 240,
+            "y": 110
+          },
+          "b": {
+            "x": 280,
+            "y": 110
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 280,
+            "y": 110
+          },
+          "b": {
+            "x": 280,
+            "y": 140
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 280,
+            "y": 140
+          },
+          "b": {
+            "x": 340,
+            "y": 140
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 240,
+            "y": 130
+          },
+          "b": {
+            "x": 270,
+            "y": 130
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 270,
+            "y": 130
+          },
+          "b": {
+            "x": 270,
+            "y": 180
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 270,
+            "y": 180
+          },
+          "b": {
+            "x": 340,
+            "y": 180
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

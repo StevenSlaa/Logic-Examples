@@ -1,0 +1,13 @@
+{
+  "id": "basic-gates",
+  "title": "1. The basic gates",
+  "description": "Seven gates side by side, all fed from the same two inputs. The whole vocabulary of digital logic on one sheet.",
+  "author": "Steven Slaa",
+  "group": "Basics",
+  "order": 1,
+  "tags": [
+    "combinational",
+    "gates"
+  ],
+  "entry": "basic-gates.logic.json"
+}

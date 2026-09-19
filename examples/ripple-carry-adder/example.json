@@ -1,0 +1,15 @@
+{
+  "id": "ripple-carry-adder",
+  "title": "1. Ripple-carry adder from gates",
+  "description": "Four full adders, twenty gates, one 4-bit adder. Splitters take the buses apart, tunnels carry the bits, and the carry passes from adder to adder.",
+  "author": "Steven Slaa",
+  "group": "Projects",
+  "order": 1,
+  "tags": [
+    "combinational",
+    "arithmetic",
+    "buses",
+    "tunnels"
+  ],
+  "entry": "ripple-carry-adder.logic.json"
+}

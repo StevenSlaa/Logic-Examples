@@ -1,0 +1,14 @@
+{
+  "id": "d-flip-flop",
+  "title": "2. D flip-flop: remembering on a clock edge",
+  "description": "Copies its input only at the instant the clock rises. The building block of every register and every CPU.",
+  "author": "Steven Slaa",
+  "group": "Memory and time",
+  "order": 2,
+  "tags": [
+    "sequential",
+    "memory",
+    "clock"
+  ],
+  "entry": "d-flip-flop.logic.json"
+}

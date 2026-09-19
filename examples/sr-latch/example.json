@@ -1,0 +1,13 @@
+{
+  "id": "sr-latch",
+  "title": "1. SR latch: a circuit that remembers",
+  "description": "Two NOR gates feeding each other hold a bit after the input goes away. Where memory comes from.",
+  "author": "Steven Slaa",
+  "group": "Memory and time",
+  "order": 1,
+  "tags": [
+    "sequential",
+    "memory"
+  ],
+  "entry": "sr-latch.logic.json"
+}

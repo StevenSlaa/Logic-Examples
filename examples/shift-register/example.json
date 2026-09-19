@@ -1,0 +1,14 @@
+{
+  "id": "shift-register",
+  "title": "3. Shift register: serial in, parallel out",
+  "description": "Four D flip-flops in a chain move every bit one place along on each clock. How one wire can deliver a whole number.",
+  "author": "Steven Slaa",
+  "group": "Projects",
+  "order": 3,
+  "tags": [
+    "sequential",
+    "memory",
+    "clock"
+  ],
+  "entry": "shift-register.logic.json"
+}

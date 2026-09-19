@@ -1,0 +1,14 @@
+{
+  "id": "counter-hex",
+  "title": "3. Counter and hex display",
+  "description": "A clock drives a 4-bit counter, shown on a hex digit, with a clear button and a carry LED.",
+  "author": "Steven Slaa",
+  "group": "Memory and time",
+  "order": 3,
+  "tags": [
+    "sequential",
+    "clock",
+    "counter"
+  ],
+  "entry": "counter-hex.logic.json"
+}

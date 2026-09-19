@@ -1,0 +1,17 @@
+name: Validate catalog
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python3 scripts/generate-manifest.py
+      # The manifest, the README front matter and the example index are all generated; a diff
+      # here means someone changed an example without running the script.
+      - run: git diff --exit-code

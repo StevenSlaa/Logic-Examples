@@ -1,0 +1,663 @@
+{
+  "schemaVersion": 2,
+  "id": "example-alu",
+  "name": "4-bit ALU",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "a",
+          "type": "pin-in",
+          "label": "A",
+          "position": {
+            "x": 60,
+            "y": 40
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "value": 6,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "b",
+          "type": "pin-in",
+          "label": "B",
+          "position": {
+            "x": 60,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "value": 3,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "op",
+          "type": "pin-in",
+          "label": "OP",
+          "position": {
+            "x": 60,
+            "y": 420
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 2,
+            "value": 0,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "add",
+          "type": "adder",
+          "label": "A + B",
+          "position": {
+            "x": 240,
+            "y": 40
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4
+          }
+        },
+        {
+          "id": "sub",
+          "type": "subtractor",
+          "label": "A − B",
+          "position": {
+            "x": 240,
+            "y": 130
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4
+          }
+        },
+        {
+          "id": "and",
+          "type": "and",
+          "label": "A AND B",
+          "position": {
+            "x": 240,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 4
+          }
+        },
+        {
+          "id": "or",
+          "type": "or",
+          "label": "A OR B",
+          "position": {
+            "x": 240,
+            "y": 290
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 4
+          }
+        },
+        {
+          "id": "carry",
+          "type": "led",
+          "label": "CARRY",
+          "position": {
+            "x": 330,
+            "y": 90
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "amber"
+          }
+        },
+        {
+          "id": "borrow",
+          "type": "led",
+          "label": "BORROW",
+          "position": {
+            "x": 330,
+            "y": 180
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "amber"
+          }
+        },
+        {
+          "id": "mux",
+          "type": "mux",
+          "label": "choose",
+          "position": {
+            "x": 400,
+            "y": 120
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "select": 2,
+            "width": 4
+          }
+        },
+        {
+          "id": "result",
+          "type": "pin-out",
+          "label": "RESULT",
+          "position": {
+            "x": 560,
+            "y": 150
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "hex",
+          "type": "hex-display",
+          "label": "",
+          "position": {
+            "x": 630,
+            "y": 130
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "zero-const",
+          "type": "constant",
+          "label": "",
+          "position": {
+            "x": 480,
+            "y": 260
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "value": "0"
+          }
+        },
+        {
+          "id": "cmp",
+          "type": "comparator",
+          "label": "is it 0?",
+          "position": {
+            "x": 560,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4
+          }
+        },
+        {
+          "id": "zero",
+          "type": "led",
+          "label": "ZERO",
+          "position": {
+            "x": 640,
+            "y": 250
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 240,
+            "y": 470
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "OP picks the operation:\n  0  A + B      1  A − B\n  2  A AND B    3  A OR B\n\nAll four units work all the time; the\nmultiplexer only chooses which answer\nreaches RESULT. ZERO lights when it is 0.",
+            "color": "green"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 50
+          },
+          "b": {
+            "x": 150,
+            "y": 50
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 150,
+            "y": 50
+          },
+          "b": {
+            "x": 150,
+            "y": 300
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 150,
+            "y": 50
+          },
+          "b": {
+            "x": 240,
+            "y": 50
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 150,
+            "y": 140
+          },
+          "b": {
+            "x": 240,
+            "y": 140
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 150,
+            "y": 230
+          },
+          "b": {
+            "x": 240,
+            "y": 230
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 150,
+            "y": 300
+          },
+          "b": {
+            "x": 240,
+            "y": 300
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 90,
+            "y": 150
+          },
+          "b": {
+            "x": 190,
+            "y": 150
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 190,
+            "y": 70
+          },
+          "b": {
+            "x": 190,
+            "y": 320
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 190,
+            "y": 70
+          },
+          "b": {
+            "x": 240,
+            "y": 70
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 190,
+            "y": 160
+          },
+          "b": {
+            "x": 240,
+            "y": 160
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 190,
+            "y": 250
+          },
+          "b": {
+            "x": 240,
+            "y": 250
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 190,
+            "y": 320
+          },
+          "b": {
+            "x": 240,
+            "y": 320
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 290,
+            "y": 80
+          },
+          "b": {
+            "x": 310,
+            "y": 80
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 310,
+            "y": 80
+          },
+          "b": {
+            "x": 310,
+            "y": 100
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 310,
+            "y": 100
+          },
+          "b": {
+            "x": 330,
+            "y": 100
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 290,
+            "y": 170
+          },
+          "b": {
+            "x": 310,
+            "y": 170
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 310,
+            "y": 170
+          },
+          "b": {
+            "x": 310,
+            "y": 190
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 310,
+            "y": 190
+          },
+          "b": {
+            "x": 330,
+            "y": 190
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 290,
+            "y": 60
+          },
+          "b": {
+            "x": 370,
+            "y": 60
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 370,
+            "y": 60
+          },
+          "b": {
+            "x": 370,
+            "y": 130
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 370,
+            "y": 130
+          },
+          "b": {
+            "x": 400,
+            "y": 130
+          }
+        },
+        {
+          "id": "w22",
+          "a": {
+            "x": 290,
+            "y": 150
+          },
+          "b": {
+            "x": 400,
+            "y": 150
+          }
+        },
+        {
+          "id": "w23",
+          "a": {
+            "x": 290,
+            "y": 240
+          },
+          "b": {
+            "x": 380,
+            "y": 240
+          }
+        },
+        {
+          "id": "w24",
+          "a": {
+            "x": 380,
+            "y": 170
+          },
+          "b": {
+            "x": 380,
+            "y": 240
+          }
+        },
+        {
+          "id": "w25",
+          "a": {
+            "x": 380,
+            "y": 170
+          },
+          "b": {
+            "x": 400,
+            "y": 170
+          }
+        },
+        {
+          "id": "w26",
+          "a": {
+            "x": 290,
+            "y": 310
+          },
+          "b": {
+            "x": 390,
+            "y": 310
+          }
+        },
+        {
+          "id": "w27",
+          "a": {
+            "x": 390,
+            "y": 190
+          },
+          "b": {
+            "x": 390,
+            "y": 310
+          }
+        },
+        {
+          "id": "w28",
+          "a": {
+            "x": 390,
+            "y": 190
+          },
+          "b": {
+            "x": 400,
+            "y": 190
+          }
+        },
+        {
+          "id": "w29",
+          "a": {
+            "x": 90,
+            "y": 430
+          },
+          "b": {
+            "x": 420,
+            "y": 430
+          }
+        },
+        {
+          "id": "w30",
+          "a": {
+            "x": 420,
+            "y": 430
+          },
+          "b": {
+            "x": 420,
+            "y": 200
+          }
+        },
+        {
+          "id": "w31",
+          "a": {
+            "x": 440,
+            "y": 160
+          },
+          "b": {
+            "x": 560,
+            "y": 160
+          }
+        },
+        {
+          "id": "w32",
+          "a": {
+            "x": 560,
+            "y": 160
+          },
+          "b": {
+            "x": 630,
+            "y": 160
+          }
+        },
+        {
+          "id": "w33",
+          "a": {
+            "x": 500,
+            "y": 160
+          },
+          "b": {
+            "x": 500,
+            "y": 250
+          }
+        },
+        {
+          "id": "w34",
+          "a": {
+            "x": 500,
+            "y": 250
+          },
+          "b": {
+            "x": 560,
+            "y": 250
+          }
+        },
+        {
+          "id": "w35",
+          "a": {
+            "x": 510,
+            "y": 270
+          },
+          "b": {
+            "x": 560,
+            "y": 270
+          }
+        },
+        {
+          "id": "w36",
+          "a": {
+            "x": 610,
+            "y": 260
+          },
+          "b": {
+            "x": 640,
+            "y": 260
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

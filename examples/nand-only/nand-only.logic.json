@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 2,
+  "id": "example-nand-only",
+  "name": "Everything from NAND",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "a",
+          "type": "pin-in",
+          "label": "A",
+          "position": {
+            "x": 60,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "b",
+          "type": "pin-in",
+          "label": "B",
+          "position": {
+            "x": 60,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "n1",
+          "type": "nand",
+          "label": "NOT",
+          "position": {
+            "x": 220,
+            "y": 70
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "out-not",
+          "type": "pin-out",
+          "label": "NOT A",
+          "position": {
+            "x": 330,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "n2",
+          "type": "nand",
+          "label": "AND",
+          "position": {
+            "x": 220,
+            "y": 150
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "n3",
+          "type": "nand",
+          "label": "",
+          "position": {
+            "x": 320,
+            "y": 150
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "out-and",
+          "type": "pin-out",
+          "label": "A AND B",
+          "position": {
+            "x": 430,
+            "y": 160
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "n4",
+          "type": "nand",
+          "label": "OR",
+          "position": {
+            "x": 220,
+            "y": 230
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "n5",
+          "type": "nand",
+          "label": "",
+          "position": {
+            "x": 220,
+            "y": 290
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "n6",
+          "type": "nand",
+          "label": "",
+          "position": {
+            "x": 320,
+            "y": 250
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "out-or",
+          "type": "pin-out",
+          "label": "A OR B",
+          "position": {
+            "x": 430,
+            "y": 260
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 520,
+            "y": 70
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Every gate on this sheet is a NAND.\n\nNOT: tie both inputs together.\nAND: a NAND, then a NOT.\nOR:  NOT each input, then NAND.\n\nSo NAND alone can build anything.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 90
+          },
+          "b": {
+            "x": 130,
+            "y": 90
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 130,
+            "y": 80
+          },
+          "b": {
+            "x": 130,
+            "y": 260
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 130,
+            "y": 80
+          },
+          "b": {
+            "x": 220,
+            "y": 80
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 130,
+            "y": 100
+          },
+          "b": {
+            "x": 220,
+            "y": 100
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 130,
+            "y": 160
+          },
+          "b": {
+            "x": 220,
+            "y": 160
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 130,
+            "y": 240
+          },
+          "b": {
+            "x": 220,
+            "y": 240
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 130,
+            "y": 260
+          },
+          "b": {
+            "x": 220,
+            "y": 260
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 90,
+            "y": 250
+          },
+          "b": {
+            "x": 170,
+            "y": 250
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 170,
+            "y": 180
+          },
+          "b": {
+            "x": 170,
+            "y": 320
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 170,
+            "y": 180
+          },
+          "b": {
+            "x": 220,
+            "y": 180
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 170,
+            "y": 300
+          },
+          "b": {
+            "x": 220,
+            "y": 300
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 170,
+            "y": 320
+          },
+          "b": {
+            "x": 220,
+            "y": 320
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 270,
+            "y": 90
+          },
+          "b": {
+            "x": 330,
+            "y": 90
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 270,
+            "y": 170
+          },
+          "b": {
+            "x": 290,
+            "y": 170
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 290,
+            "y": 160
+          },
+          "b": {
+            "x": 290,
+            "y": 180
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 290,
+            "y": 160
+          },
+          "b": {
+            "x": 320,
+            "y": 160
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 290,
+            "y": 180
+          },
+          "b": {
+            "x": 320,
+            "y": 180
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 370,
+            "y": 170
+          },
+          "b": {
+            "x": 430,
+            "y": 170
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 270,
+            "y": 250
+          },
+          "b": {
+            "x": 290,
+            "y": 250
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 290,
+            "y": 250
+          },
+          "b": {
+            "x": 290,
+            "y": 260
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 290,
+            "y": 260
+          },
+          "b": {
+            "x": 320,
+            "y": 260
+          }
+        },
+        {
+          "id": "w22",
+          "a": {
+            "x": 270,
+            "y": 310
+          },
+          "b": {
+            "x": 300,
+            "y": 310
+          }
+        },
+        {
+          "id": "w23",
+          "a": {
+            "x": 300,
+            "y": 280
+          },
+          "b": {
+            "x": 300,
+            "y": 310
+          }
+        },
+        {
+          "id": "w24",
+          "a": {
+            "x": 300,
+            "y": 280
+          },
+          "b": {
+            "x": 320,
+            "y": 280
+          }
+        },
+        {
+          "id": "w25",
+          "a": {
+            "x": 370,
+            "y": 270
+          },
+          "b": {
+            "x": 430,
+            "y": 270
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

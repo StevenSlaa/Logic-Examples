@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 2,
+  "id": "example-de-morgan",
+  "name": "De Morgan's law",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "a",
+          "type": "pin-in",
+          "label": "A",
+          "position": {
+            "x": 60,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "b",
+          "type": "pin-in",
+          "label": "B",
+          "position": {
+            "x": 60,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "nand",
+          "type": "nand",
+          "label": "NOT (A AND B)",
+          "position": {
+            "x": 240,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "x",
+          "type": "pin-out",
+          "label": "X",
+          "position": {
+            "x": 340,
+            "y": 90
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "nota",
+          "type": "not",
+          "label": "",
+          "position": {
+            "x": 180,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1
+          }
+        },
+        {
+          "id": "notb",
+          "type": "not",
+          "label": "",
+          "position": {
+            "x": 180,
+            "y": 260
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1
+          }
+        },
+        {
+          "id": "or",
+          "type": "or",
+          "label": "(NOT A) OR (NOT B)",
+          "position": {
+            "x": 260,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "y",
+          "type": "pin-out",
+          "label": "Y",
+          "position": {
+            "x": 340,
+            "y": 230
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "n1",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 420,
+            "y": 80
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Two different circuits, one answer.\nTry all four combinations of A and B:\nX and Y always agree.\n\nThat is De Morgan's law:\nNOT (A AND B) = (NOT A) OR (NOT B)",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 90
+          },
+          "b": {
+            "x": 130,
+            "y": 90
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 130,
+            "y": 90
+          },
+          "b": {
+            "x": 130,
+            "y": 230
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 130,
+            "y": 90
+          },
+          "b": {
+            "x": 240,
+            "y": 90
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 130,
+            "y": 230
+          },
+          "b": {
+            "x": 180,
+            "y": 230
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 90,
+            "y": 210
+          },
+          "b": {
+            "x": 150,
+            "y": 210
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 150,
+            "y": 110
+          },
+          "b": {
+            "x": 150,
+            "y": 270
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 150,
+            "y": 110
+          },
+          "b": {
+            "x": 240,
+            "y": 110
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 150,
+            "y": 270
+          },
+          "b": {
+            "x": 180,
+            "y": 270
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 220,
+            "y": 230
+          },
+          "b": {
+            "x": 260,
+            "y": 230
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 220,
+            "y": 270
+          },
+          "b": {
+            "x": 240,
+            "y": 270
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 240,
+            "y": 250
+          },
+          "b": {
+            "x": 240,
+            "y": 270
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 240,
+            "y": 250
+          },
+          "b": {
+            "x": 260,
+            "y": 250
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 290,
+            "y": 100
+          },
+          "b": {
+            "x": 340,
+            "y": 100
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 310,
+            "y": 240
+          },
+          "b": {
+            "x": 340,
+            "y": 240
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

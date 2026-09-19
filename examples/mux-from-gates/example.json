@@ -1,0 +1,13 @@
+{
+  "id": "mux-from-gates",
+  "title": "1. Multiplexer",
+  "description": "A select line chooses which of two inputs reaches the output, built from gates and then again with the Multiplexer part.",
+  "author": "Steven Slaa",
+  "group": "Choosing and routing",
+  "order": 1,
+  "tags": [
+    "combinational",
+    "plexers"
+  ],
+  "entry": "mux-from-gates.logic.json"
+}

@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 2,
+  "id": "example-traffic-light",
+  "name": "Traffic light",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "clk",
+          "type": "clock",
+          "label": "CLK",
+          "position": {
+            "x": 60,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "divide": 2
+          }
+        },
+        {
+          "id": "ctr",
+          "type": "counter",
+          "label": "phase",
+          "position": {
+            "x": 160,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 2,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "dec",
+          "type": "decoder",
+          "label": "",
+          "position": {
+            "x": 300,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "select": 2
+          }
+        },
+        {
+          "id": "or-red",
+          "type": "or",
+          "label": "red",
+          "position": {
+            "x": 420,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "or-amber",
+          "type": "or",
+          "label": "amber",
+          "position": {
+            "x": 420,
+            "y": 160
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "red",
+          "type": "led",
+          "label": "RED",
+          "position": {
+            "x": 540,
+            "y": 70
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "amber",
+          "type": "led",
+          "label": "AMBER",
+          "position": {
+            "x": 540,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "amber"
+          }
+        },
+        {
+          "id": "green",
+          "type": "led",
+          "label": "GREEN",
+          "position": {
+            "x": 540,
+            "y": 210
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 60,
+            "y": 260
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "phase 0: red          phase 2: green\nphase 1: red + amber  phase 3: amber\n\nThe counter walks through the phases; the\ndecoder turns the phase into one wire; the\nOR gates decide which lamps that wire lights.",
+            "color": "green"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 110
+          },
+          "b": {
+            "x": 160,
+            "y": 110
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 220,
+            "y": 120
+          },
+          "b": {
+            "x": 260,
+            "y": 120
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 260,
+            "y": 120
+          },
+          "b": {
+            "x": 260,
+            "y": 170
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 260,
+            "y": 170
+          },
+          "b": {
+            "x": 320,
+            "y": 170
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 320,
+            "y": 170
+          },
+          "b": {
+            "x": 320,
+            "y": 140
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 340,
+            "y": 70
+          },
+          "b": {
+            "x": 420,
+            "y": 70
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 340,
+            "y": 90
+          },
+          "b": {
+            "x": 420,
+            "y": 90
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 380,
+            "y": 90
+          },
+          "b": {
+            "x": 380,
+            "y": 170
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 380,
+            "y": 170
+          },
+          "b": {
+            "x": 420,
+            "y": 170
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 340,
+            "y": 110
+          },
+          "b": {
+            "x": 400,
+            "y": 110
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 400,
+            "y": 110
+          },
+          "b": {
+            "x": 400,
+            "y": 220
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 400,
+            "y": 220
+          },
+          "b": {
+            "x": 540,
+            "y": 220
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 340,
+            "y": 130
+          },
+          "b": {
+            "x": 360,
+            "y": 130
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 360,
+            "y": 130
+          },
+          "b": {
+            "x": 360,
+            "y": 190
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 360,
+            "y": 190
+          },
+          "b": {
+            "x": 420,
+            "y": 190
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 470,
+            "y": 80
+          },
+          "b": {
+            "x": 540,
+            "y": 80
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 470,
+            "y": 180
+          },
+          "b": {
+            "x": 500,
+            "y": 180
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 500,
+            "y": 150
+          },
+          "b": {
+            "x": 500,
+            "y": 180
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 500,
+            "y": 150
+          },
+          "b": {
+            "x": 540,
+            "y": 150
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": true,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

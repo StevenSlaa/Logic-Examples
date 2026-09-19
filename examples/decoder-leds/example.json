@@ -1,0 +1,13 @@
+{
+  "id": "decoder-leds",
+  "title": "2. Decoder: binary to one-hot",
+  "description": "A 2-bit number lights exactly one of four LEDs. The part that turns an address into 'this one'.",
+  "author": "Steven Slaa",
+  "group": "Choosing and routing",
+  "order": 2,
+  "tags": [
+    "combinational",
+    "plexers"
+  ],
+  "entry": "decoder-leds.logic.json"
+}

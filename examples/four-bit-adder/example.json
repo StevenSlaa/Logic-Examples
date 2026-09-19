@@ -1,0 +1,14 @@
+{
+  "id": "four-bit-adder",
+  "title": "3. Adding 4-bit numbers",
+  "description": "The Adder part on 4-bit buses, with a hex display and the carry out. What a ripple of full adders looks like from the outside.",
+  "author": "Steven Slaa",
+  "group": "Arithmetic",
+  "order": 3,
+  "tags": [
+    "combinational",
+    "arithmetic",
+    "buses"
+  ],
+  "entry": "four-bit-adder.logic.json"
+}

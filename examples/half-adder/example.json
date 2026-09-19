@@ -1,0 +1,13 @@
+{
+  "id": "half-adder",
+  "title": "1. Half adder",
+  "description": "Adds two single bits. XOR makes the sum digit and AND makes the carry: binary addition in two gates.",
+  "author": "Steven Slaa",
+  "group": "Arithmetic",
+  "order": 1,
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "entry": "half-adder.logic.json"
+}

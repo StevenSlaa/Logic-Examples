@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 2,
+  "id": "example-d-flip-flop",
+  "name": "D flip-flop",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "d",
+          "type": "pin-in",
+          "label": "D",
+          "position": {
+            "x": 60,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "clk",
+          "type": "pin-in",
+          "label": "CLK",
+          "position": {
+            "x": 60,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "ff",
+          "type": "dff",
+          "label": "",
+          "position": {
+            "x": 200,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "q",
+          "type": "pin-out",
+          "label": "Q",
+          "position": {
+            "x": 320,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "led",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 390,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "qn",
+          "type": "pin-out",
+          "label": "NOT Q",
+          "position": {
+            "x": 320,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 60,
+            "y": 160
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Set D, then click CLK twice (0 → 1 → 0).\nQ copies D only at the moment CLK rises.\nChange D while CLK sits still: Q ignores it.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 70
+          },
+          "b": {
+            "x": 200,
+            "y": 70
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 90,
+            "y": 110
+          },
+          "b": {
+            "x": 150,
+            "y": 110
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 150,
+            "y": 90
+          },
+          "b": {
+            "x": 150,
+            "y": 110
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 150,
+            "y": 90
+          },
+          "b": {
+            "x": 200,
+            "y": 90
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 240,
+            "y": 70
+          },
+          "b": {
+            "x": 320,
+            "y": 70
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 320,
+            "y": 70
+          },
+          "b": {
+            "x": 390,
+            "y": 70
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 240,
+            "y": 90
+          },
+          "b": {
+            "x": 280,
+            "y": 90
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 280,
+            "y": 90
+          },
+          "b": {
+            "x": 280,
+            "y": 110
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 280,
+            "y": 110
+          },
+          "b": {
+            "x": 320,
+            "y": 110
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

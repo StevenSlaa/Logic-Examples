@@ -1,0 +1,14 @@
+{
+  "id": "nand-only",
+  "title": "3. Everything from NAND",
+  "description": "NOT, AND and OR built out of nothing but NAND gates, which is why a chip factory only really needs one gate.",
+  "author": "Steven Slaa",
+  "group": "Basics",
+  "order": 3,
+  "tags": [
+    "combinational",
+    "gates",
+    "nand"
+  ],
+  "entry": "nand-only.logic.json"
+}

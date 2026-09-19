@@ -1,0 +1,14 @@
+{
+  "id": "de-morgan",
+  "title": "2. De Morgan's laws",
+  "description": "Two circuits built from different gates that always give the same answer. How to swap AND for OR by inverting.",
+  "author": "Steven Slaa",
+  "group": "Basics",
+  "order": 2,
+  "tags": [
+    "combinational",
+    "gates",
+    "boolean-algebra"
+  ],
+  "entry": "de-morgan.logic.json"
+}

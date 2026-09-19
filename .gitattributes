@@ -1,0 +1,3 @@
+# The manifest hashes these files byte for byte; a checkout that rewrote line endings would
+# make every hash wrong on Windows.
+* text=auto eol=lf

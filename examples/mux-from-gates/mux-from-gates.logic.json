@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 2,
+  "id": "example-mux-from-gates",
+  "name": "Multiplexer",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "a",
+          "type": "pin-in",
+          "label": "A",
+          "position": {
+            "x": 60,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "b",
+          "type": "pin-in",
+          "label": "B",
+          "position": {
+            "x": 60,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "s",
+          "type": "pin-in",
+          "label": "S",
+          "position": {
+            "x": 60,
+            "y": 300
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "not",
+          "type": "not",
+          "label": "",
+          "position": {
+            "x": 200,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1
+          }
+        },
+        {
+          "id": "and1",
+          "type": "and",
+          "label": "A when S=0",
+          "position": {
+            "x": 280,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "and2",
+          "type": "and",
+          "label": "B when S=1",
+          "position": {
+            "x": 280,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "or",
+          "type": "or",
+          "label": "",
+          "position": {
+            "x": 400,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "y",
+          "type": "pin-out",
+          "label": "Y",
+          "position": {
+            "x": 510,
+            "y": 110
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "mux",
+          "type": "mux",
+          "label": "MUX part",
+          "position": {
+            "x": 280,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "select": 1,
+            "width": 1
+          }
+        },
+        {
+          "id": "y2",
+          "type": "pin-out",
+          "label": "Y (part)",
+          "position": {
+            "x": 510,
+            "y": 250
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 590,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "S picks which input reaches Y:\nS = 0 lets A through, S = 1 lets B through.\n\nThe gates on top and the MUX part below\ndo exactly the same thing.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 70
+          },
+          "b": {
+            "x": 130,
+            "y": 70
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 130,
+            "y": 70
+          },
+          "b": {
+            "x": 130,
+            "y": 250
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 130,
+            "y": 70
+          },
+          "b": {
+            "x": 280,
+            "y": 70
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 130,
+            "y": 250
+          },
+          "b": {
+            "x": 280,
+            "y": 250
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 90,
+            "y": 150
+          },
+          "b": {
+            "x": 150,
+            "y": 150
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 150,
+            "y": 150
+          },
+          "b": {
+            "x": 150,
+            "y": 270
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 150,
+            "y": 150
+          },
+          "b": {
+            "x": 280,
+            "y": 150
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 150,
+            "y": 270
+          },
+          "b": {
+            "x": 280,
+            "y": 270
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 90,
+            "y": 310
+          },
+          "b": {
+            "x": 300,
+            "y": 310
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 300,
+            "y": 310
+          },
+          "b": {
+            "x": 300,
+            "y": 280
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 160,
+            "y": 170
+          },
+          "b": {
+            "x": 160,
+            "y": 310
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 160,
+            "y": 210
+          },
+          "b": {
+            "x": 200,
+            "y": 210
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 160,
+            "y": 170
+          },
+          "b": {
+            "x": 280,
+            "y": 170
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 240,
+            "y": 210
+          },
+          "b": {
+            "x": 260,
+            "y": 210
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 260,
+            "y": 90
+          },
+          "b": {
+            "x": 260,
+            "y": 210
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 260,
+            "y": 90
+          },
+          "b": {
+            "x": 280,
+            "y": 90
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 330,
+            "y": 80
+          },
+          "b": {
+            "x": 360,
+            "y": 80
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 360,
+            "y": 80
+          },
+          "b": {
+            "x": 360,
+            "y": 110
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 360,
+            "y": 110
+          },
+          "b": {
+            "x": 400,
+            "y": 110
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 330,
+            "y": 160
+          },
+          "b": {
+            "x": 370,
+            "y": 160
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 370,
+            "y": 130
+          },
+          "b": {
+            "x": 370,
+            "y": 160
+          }
+        },
+        {
+          "id": "w22",
+          "a": {
+            "x": 370,
+            "y": 130
+          },
+          "b": {
+            "x": 400,
+            "y": 130
+          }
+        },
+        {
+          "id": "w23",
+          "a": {
+            "x": 450,
+            "y": 120
+          },
+          "b": {
+            "x": 510,
+            "y": 120
+          }
+        },
+        {
+          "id": "w24",
+          "a": {
+            "x": 320,
+            "y": 260
+          },
+          "b": {
+            "x": 510,
+            "y": 260
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

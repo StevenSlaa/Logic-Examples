@@ -1,0 +1,14 @@
+{
+  "id": "sequence-detector",
+  "title": "4. Sequence detector: a finite-state machine",
+  "description": "Watches a stream of bits and lights up when it has just seen 1, 0, 1. Designing a state machine from a state table, step by step.",
+  "author": "Steven Slaa",
+  "group": "Projects",
+  "order": 4,
+  "tags": [
+    "sequential",
+    "state-machine",
+    "design"
+  ],
+  "entry": "sequence-detector.logic.json"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "alu",
+  "title": "2. A 4-bit ALU",
+  "description": "Add, subtract, AND and OR on two 4-bit numbers, picked by an opcode, with zero, carry and borrow flags. The arithmetic heart of a processor.",
+  "author": "Steven Slaa",
+  "group": "Projects",
+  "order": 2,
+  "tags": [
+    "combinational",
+    "arithmetic",
+    "plexers",
+    "cpu"
+  ],
+  "entry": "alu.logic.json"
+}

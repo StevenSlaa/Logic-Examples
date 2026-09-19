@@ -1,0 +1,13 @@
+{
+  "id": "majority-vote",
+  "title": "4. Majority vote: from truth table to circuit",
+  "description": "Three inputs, and the output agrees with the majority. How to turn a truth table into gates, step by step.",
+  "author": "Steven Slaa",
+  "group": "Basics",
+  "order": 4,
+  "tags": [
+    "combinational",
+    "sum-of-products"
+  ],
+  "entry": "majority-vote.logic.json"
+}

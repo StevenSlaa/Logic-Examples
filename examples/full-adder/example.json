@@ -1,0 +1,13 @@
+{
+  "id": "full-adder",
+  "title": "2. Full adder",
+  "description": "Adds two bits plus a carry from the column before. Chain these and you can add numbers of any length.",
+  "author": "Steven Slaa",
+  "group": "Arithmetic",
+  "order": 2,
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "entry": "full-adder.logic.json"
+}

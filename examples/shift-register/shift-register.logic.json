@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 2,
+  "id": "example-shift-register",
+  "name": "Shift register",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "data",
+          "type": "pin-in",
+          "label": "DATA",
+          "position": {
+            "x": 60,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "shift",
+          "type": "button",
+          "label": "SHIFT",
+          "position": {
+            "x": 60,
+            "y": 220
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "value": 0
+          }
+        },
+        {
+          "id": "ff0",
+          "type": "dff",
+          "label": "bit 0",
+          "position": {
+            "x": 180,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff1",
+          "type": "dff",
+          "label": "bit 1",
+          "position": {
+            "x": 300,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff2",
+          "type": "dff",
+          "label": "bit 2",
+          "position": {
+            "x": 420,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff3",
+          "type": "dff",
+          "label": "bit 3",
+          "position": {
+            "x": 540,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "led0",
+          "type": "led",
+          "label": "Q0",
+          "position": {
+            "x": 250,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "led1",
+          "type": "led",
+          "label": "Q1",
+          "position": {
+            "x": 370,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "led2",
+          "type": "led",
+          "label": "Q2",
+          "position": {
+            "x": 490,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "led3",
+          "type": "led",
+          "label": "Q3",
+          "position": {
+            "x": 610,
+            "y": 140
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 180,
+            "y": 270
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Set DATA, then press SHIFT. Each press moves every\nbit one place to the right, and DATA enters at Q0.\n\nTry sending 1, 0, 1, 1: after four presses the\nLEDs hold the whole pattern at once.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 70
+          },
+          "b": {
+            "x": 180,
+            "y": 70
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 220,
+            "y": 70
+          },
+          "b": {
+            "x": 300,
+            "y": 70
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 240,
+            "y": 70
+          },
+          "b": {
+            "x": 240,
+            "y": 150
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 240,
+            "y": 150
+          },
+          "b": {
+            "x": 250,
+            "y": 150
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 340,
+            "y": 70
+          },
+          "b": {
+            "x": 420,
+            "y": 70
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 360,
+            "y": 70
+          },
+          "b": {
+            "x": 360,
+            "y": 150
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 360,
+            "y": 150
+          },
+          "b": {
+            "x": 370,
+            "y": 150
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 460,
+            "y": 70
+          },
+          "b": {
+            "x": 540,
+            "y": 70
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 480,
+            "y": 70
+          },
+          "b": {
+            "x": 480,
+            "y": 150
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 480,
+            "y": 150
+          },
+          "b": {
+            "x": 490,
+            "y": 150
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 580,
+            "y": 70
+          },
+          "b": {
+            "x": 600,
+            "y": 70
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 600,
+            "y": 70
+          },
+          "b": {
+            "x": 600,
+            "y": 150
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 600,
+            "y": 150
+          },
+          "b": {
+            "x": 610,
+            "y": 150
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 90,
+            "y": 230
+          },
+          "b": {
+            "x": 520,
+            "y": 230
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 160,
+            "y": 230
+          },
+          "b": {
+            "x": 160,
+            "y": 90
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 160,
+            "y": 90
+          },
+          "b": {
+            "x": 180,
+            "y": 90
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 280,
+            "y": 230
+          },
+          "b": {
+            "x": 280,
+            "y": 90
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 280,
+            "y": 90
+          },
+          "b": {
+            "x": 300,
+            "y": 90
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 400,
+            "y": 230
+          },
+          "b": {
+            "x": 400,
+            "y": 90
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 400,
+            "y": 90
+          },
+          "b": {
+            "x": 420,
+            "y": 90
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 520,
+            "y": 230
+          },
+          "b": {
+            "x": 520,
+            "y": 90
+          }
+        },
+        {
+          "id": "w22",
+          "a": {
+            "x": 520,
+            "y": 90
+          },
+          "b": {
+            "x": 540,
+            "y": 90
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

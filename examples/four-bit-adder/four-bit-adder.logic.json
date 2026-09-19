@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 2,
+  "id": "example-four-bit-adder",
+  "name": "Adding 4-bit numbers",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "a",
+          "type": "pin-in",
+          "label": "A",
+          "position": {
+            "x": 60,
+            "y": 60
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "value": 5,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "b",
+          "type": "pin-in",
+          "label": "B",
+          "position": {
+            "x": 60,
+            "y": 120
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "value": 3,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "cin",
+          "type": "pin-in",
+          "label": "CIN",
+          "position": {
+            "x": 60,
+            "y": 180
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "add",
+          "type": "adder",
+          "label": "A + B",
+          "position": {
+            "x": 200,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4
+          }
+        },
+        {
+          "id": "sum",
+          "type": "pin-out",
+          "label": "SUM",
+          "position": {
+            "x": 320,
+            "y": 110
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 4,
+            "radix": "dec"
+          }
+        },
+        {
+          "id": "cout",
+          "type": "pin-out",
+          "label": "COUT",
+          "position": {
+            "x": 320,
+            "y": 160
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "hex",
+          "type": "hex-display",
+          "label": "",
+          "position": {
+            "x": 400,
+            "y": 90
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 60,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "A and B are 4-bit buses: four wires drawn as one.\nClick a pin to count it up, or set its value\nin the Inspector. SUM wraps past 15, and\nCOUT lights up when it does.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 90,
+            "y": 70
+          },
+          "b": {
+            "x": 150,
+            "y": 70
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 150,
+            "y": 70
+          },
+          "b": {
+            "x": 150,
+            "y": 110
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 150,
+            "y": 110
+          },
+          "b": {
+            "x": 200,
+            "y": 110
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 90,
+            "y": 130
+          },
+          "b": {
+            "x": 200,
+            "y": 130
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 90,
+            "y": 190
+          },
+          "b": {
+            "x": 170,
+            "y": 190
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 170,
+            "y": 150
+          },
+          "b": {
+            "x": 170,
+            "y": 190
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 170,
+            "y": 150
+          },
+          "b": {
+            "x": 200,
+            "y": 150
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 250,
+            "y": 120
+          },
+          "b": {
+            "x": 320,
+            "y": 120
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 320,
+            "y": 120
+          },
+          "b": {
+            "x": 360,
+            "y": 120
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 360,
+            "y": 120
+          },
+          "b": {
+            "x": 400,
+            "y": 120
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 250,
+            "y": 140
+          },
+          "b": {
+            "x": 290,
+            "y": 140
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 290,
+            "y": 140
+          },
+          "b": {
+            "x": 290,
+            "y": 170
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 290,
+            "y": 170
+          },
+          "b": {
+            "x": 320,
+            "y": 170
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

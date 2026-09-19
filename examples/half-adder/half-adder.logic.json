@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "id": "example-half-adder",
+  "name": "Half adder",
+  "createdAt": "2026-09-19T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "a",
+          "type": "pin-in",
+          "label": "A",
+          "position": {
+            "x": 100,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "b",
+          "type": "pin-in",
+          "label": "B",
+          "position": {
+            "x": 150,
+            "y": 120
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "value": 0,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "xor",
+          "type": "xor",
+          "label": "sum",
+          "position": {
+            "x": 300,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "and",
+          "type": "and",
+          "label": "carry",
+          "position": {
+            "x": 300,
+            "y": 200
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "sum",
+          "type": "pin-out",
+          "label": "SUM",
+          "position": {
+            "x": 400,
+            "y": 110
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "carry",
+          "type": "pin-out",
+          "label": "CARRY",
+          "position": {
+            "x": 400,
+            "y": 210
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "width": 1,
+            "radix": "bin"
+          }
+        },
+        {
+          "id": "led-sum",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 470,
+            "y": 110
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "led-carry",
+          "type": "led",
+          "label": "",
+          "position": {
+            "x": 470,
+            "y": 210
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "amber"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 100,
+            "y": 270
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "1 + 1 = 10 in binary: a 0 here, and a 1\ncarried to the next column.\n\nXOR gives the sum digit, AND the carry.",
+            "color": "yellow"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 130,
+            "y": 110
+          },
+          "b": {
+            "x": 300,
+            "y": 110
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 140,
+            "y": 110
+          },
+          "b": {
+            "x": 140,
+            "y": 230
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 140,
+            "y": 230
+          },
+          "b": {
+            "x": 300,
+            "y": 230
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 180,
+            "y": 130
+          },
+          "b": {
+            "x": 300,
+            "y": 130
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 200,
+            "y": 130
+          },
+          "b": {
+            "x": 200,
+            "y": 210
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 200,
+            "y": 210
+          },
+          "b": {
+            "x": 300,
+            "y": 210
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 350,
+            "y": 120
+          },
+          "b": {
+            "x": 470,
+            "y": 120
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 350,
+            "y": 220
+          },
+          "b": {
+            "x": 470,
+            "y": 220
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": false,
+    "tickFrequency": 2,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}
