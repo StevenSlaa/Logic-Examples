@@ -43,16 +43,18 @@ arithmetic.
 
 ## How it works
 
-The circuit adds in two steps, the way you might add three numbers by hand.
+The circuit adds in two steps, the way you might add three numbers by hand. It reads left to
+right in three blocks, each with a coloured note above it: half adder 1, half adder 2, then the OR.
 
-**First half adder (left):** `A XOR B` and `A AND B`. The XOR output is the sum of A and B
+**Half adder 1 (left):** `A XOR B` and `A AND B`. The XOR output is the sum of A and B
 without the carry; it goes on to the second step. The AND output is 1 if A and B on their own
 already overflowed.
 
-**Second half adder (right):** it adds CIN to that first sum. Its XOR is the final **SUM**. Its AND,
+**Half adder 2 (middle):** it adds CIN to that first sum. CIN sits right next to it, because
+this is the only step that uses it. Its XOR is the final **SUM**. Its AND,
 labelled *carry through*, is 1 if adding the carry in made the column overflow.
 
-**The OR gate:** the column carries out if either step overflowed. They can never both overflow
+**The OR gate (right):** the column carries out if either step overflowed. They can never both overflow
 at once (the most a column can hold is 1 + 1 + 1 = 3, which only overflows once), so an OR is
 enough.
 
@@ -101,5 +103,5 @@ parallel.
 
 ## Next
 
-[Adding 4-bit numbers](../four-bit-adder): the Adder part, which is this chain packed into one
-box.
+[A 4-bit adder, wire by wire](../four-bit-adder-wired): four of these chained together, every
+wire drawn.

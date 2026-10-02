@@ -18,7 +18,7 @@ happens when the answer does not fit.
 
 ## Before you start
 
-[Full adder](../full-adder), so you know what is inside the Adder part.
+[A 4-bit adder, wire by wire](../four-bit-adder-wired), so you know what is inside the Adder part.
 
 ## Try it
 

@@ -1,0 +1,13 @@
+{
+  "id": "four-bit-adder-wired",
+  "title": "3. A 4-bit adder, wire by wire",
+  "description": "Four full adders on one sheet, every bit its own pin and every carry a wire you can follow. No buses.",
+  "author": "Steven Slaa",
+  "group": "Arithmetic",
+  "order": 3,
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "entry": "four-bit-adder-wired.logic.json"
+}

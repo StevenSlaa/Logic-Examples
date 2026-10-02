@@ -165,19 +165,43 @@
       "circuit": {
         "path": "full-adder.logic.json",
         "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/full-adder/full-adder.logic.json",
-        "sha256": "9ee2b6f9ac4468ea665c5083cb8313536e563fa39b2f384d75d956a81d0477d1",
+        "sha256": "61366cef25ccba922c1206500328cdb14b0de19d1fca364ff709ec72aa9a7e52",
         "mime": "application/json"
       },
       "readme": {
         "path": "README.md",
         "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/full-adder/README.md",
-        "sha256": "622f03a7b0eab7fcd7569debb81a5cb0abeef023e808dc711dda14c97ea42ebb",
+        "sha256": "79ab990e355986a703396a0a7548e4403025c9f94ff1f922466c0c513ce26479",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "four-bit-adder-wired",
+      "title": "3. A 4-bit adder, wire by wire",
+      "description": "Four full adders on one sheet, every bit its own pin and every carry a wire you can follow. No buses.",
+      "author": "Steven Slaa",
+      "group": "Arithmetic",
+      "tags": [
+        "combinational",
+        "arithmetic"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/four-bit-adder-wired",
+      "circuit": {
+        "path": "four-bit-adder-wired.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/four-bit-adder-wired/four-bit-adder-wired.logic.json",
+        "sha256": "cc471eecb6a7a21db42c475a8f0f851c0804b7bf590e6492e99e9c62e73b4c17",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/four-bit-adder-wired/README.md",
+        "sha256": "8be48d81e0c01e3b0554fd5c507816d1d5984f70799d3295293138455f0ac801",
         "mime": "text/markdown"
       }
     },
     {
       "id": "four-bit-adder",
-      "title": "3. Adding 4-bit numbers",
+      "title": "4. Adding 4-bit numbers",
       "description": "The Adder part on 4-bit buses, with a hex display and the carry out. What a ripple of full adders looks like from the outside.",
       "author": "Steven Slaa",
       "group": "Arithmetic",
@@ -196,7 +220,7 @@
       "readme": {
         "path": "README.md",
         "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/four-bit-adder/README.md",
-        "sha256": "22ee34d7275e1d872e8336097e258085ad07f16e674e5f0960cd3a217021522a",
+        "sha256": "9fdc9e7bc84f390f5c2144315940c6986b0d415e0e7204801ea3906a4d69c93e",
         "mime": "text/markdown"
       }
     },

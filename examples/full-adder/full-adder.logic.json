@@ -16,7 +16,7 @@
           "label": "A",
           "position": {
             "x": 60,
-            "y": 60
+            "y": 100
           },
           "rotation": 0,
           "mirrored": false,
@@ -31,8 +31,8 @@
           "type": "pin-in",
           "label": "B",
           "position": {
-            "x": 60,
-            "y": 140
+            "x": 130,
+            "y": 120
           },
           "rotation": 0,
           "mirrored": false,
@@ -47,8 +47,8 @@
           "type": "pin-in",
           "label": "CIN",
           "position": {
-            "x": 60,
-            "y": 300
+            "x": 340,
+            "y": 170
           },
           "rotation": 0,
           "mirrored": false,
@@ -63,8 +63,8 @@
           "type": "xor",
           "label": "A XOR B",
           "position": {
-            "x": 240,
-            "y": 60
+            "x": 200,
+            "y": 100
           },
           "rotation": 0,
           "mirrored": false,
@@ -78,8 +78,8 @@
           "type": "and",
           "label": "A AND B",
           "position": {
-            "x": 240,
-            "y": 200
+            "x": 200,
+            "y": 180
           },
           "rotation": 0,
           "mirrored": false,
@@ -93,8 +93,8 @@
           "type": "xor",
           "label": "sum",
           "position": {
-            "x": 400,
-            "y": 70
+            "x": 440,
+            "y": 110
           },
           "rotation": 0,
           "mirrored": false,
@@ -108,8 +108,8 @@
           "type": "and",
           "label": "carry through",
           "position": {
-            "x": 400,
-            "y": 260
+            "x": 440,
+            "y": 210
           },
           "rotation": 0,
           "mirrored": false,
@@ -123,7 +123,7 @@
           "type": "or",
           "label": "carry",
           "position": {
-            "x": 520,
+            "x": 560,
             "y": 220
           },
           "rotation": 0,
@@ -138,8 +138,8 @@
           "type": "pin-out",
           "label": "SUM",
           "position": {
-            "x": 520,
-            "y": 80
+            "x": 580,
+            "y": 120
           },
           "rotation": 0,
           "mirrored": false,
@@ -153,7 +153,7 @@
           "type": "pin-out",
           "label": "COUT",
           "position": {
-            "x": 630,
+            "x": 660,
             "y": 230
           },
           "rotation": 0,
@@ -169,13 +169,58 @@
           "label": "",
           "position": {
             "x": 60,
-            "y": 360
+            "y": 340
           },
           "rotation": 0,
           "mirrored": false,
           "attributes": {
-            "text": "Two half adders and an OR.\nThe first adds A and B; the second adds the\ncarry that came in from the column before.\nCOUT is 1 when either of them overflowed.",
+            "text": "Two half adders and an OR, left to right.\nHalf adder 1 adds A and B. Half adder 2 adds\nCIN to that sum. The OR sets COUT when\neither of them carried.",
             "color": "blue"
+          }
+        },
+        {
+          "id": "note-ha1",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 190,
+            "y": 30
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Half adder 1: A + B",
+            "color": "green"
+          }
+        },
+        {
+          "id": "note-ha2",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 400,
+            "y": 30
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Half adder 2: + CIN",
+            "color": "amber"
+          }
+        },
+        {
+          "id": "note-or",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 540,
+            "y": 180
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "OR: carry out",
+            "color": "pink"
           }
         }
       ],
@@ -184,263 +229,230 @@
           "id": "w1",
           "a": {
             "x": 90,
-            "y": 70
+            "y": 110
           },
           "b": {
-            "x": 150,
-            "y": 70
+            "x": 200,
+            "y": 110
           }
         },
         {
           "id": "w2",
           "a": {
-            "x": 150,
-            "y": 70
+            "x": 120,
+            "y": 110
           },
           "b": {
-            "x": 150,
+            "x": 120,
             "y": 210
           }
         },
         {
           "id": "w3",
           "a": {
-            "x": 150,
-            "y": 70
+            "x": 120,
+            "y": 210
           },
           "b": {
-            "x": 240,
-            "y": 70
+            "x": 200,
+            "y": 210
           }
         },
         {
           "id": "w4",
           "a": {
-            "x": 150,
-            "y": 210
+            "x": 160,
+            "y": 130
           },
           "b": {
-            "x": 240,
-            "y": 210
+            "x": 200,
+            "y": 130
           }
         },
         {
           "id": "w5",
           "a": {
-            "x": 90,
-            "y": 150
+            "x": 170,
+            "y": 130
           },
           "b": {
-            "x": 190,
-            "y": 150
+            "x": 170,
+            "y": 190
           }
         },
         {
           "id": "w6",
           "a": {
-            "x": 190,
-            "y": 90
+            "x": 170,
+            "y": 190
           },
           "b": {
-            "x": 190,
-            "y": 230
+            "x": 200,
+            "y": 190
           }
         },
         {
           "id": "w7",
           "a": {
-            "x": 190,
-            "y": 90
+            "x": 250,
+            "y": 120
           },
           "b": {
-            "x": 240,
-            "y": 90
+            "x": 440,
+            "y": 120
           }
         },
         {
           "id": "w8",
           "a": {
-            "x": 190,
-            "y": 230
+            "x": 320,
+            "y": 120
           },
           "b": {
-            "x": 240,
-            "y": 230
+            "x": 320,
+            "y": 240
           }
         },
         {
           "id": "w9",
           "a": {
-            "x": 90,
-            "y": 310
+            "x": 320,
+            "y": 240
           },
           "b": {
-            "x": 360,
-            "y": 310
+            "x": 440,
+            "y": 240
           }
         },
         {
           "id": "w10",
           "a": {
-            "x": 360,
-            "y": 100
+            "x": 370,
+            "y": 180
           },
           "b": {
-            "x": 360,
-            "y": 310
+            "x": 400,
+            "y": 180
           }
         },
         {
           "id": "w11",
           "a": {
-            "x": 360,
-            "y": 100
+            "x": 400,
+            "y": 140
           },
           "b": {
             "x": 400,
-            "y": 100
+            "y": 220
           }
         },
         {
           "id": "w12",
           "a": {
-            "x": 360,
-            "y": 290
+            "x": 400,
+            "y": 140
           },
           "b": {
-            "x": 400,
-            "y": 290
+            "x": 440,
+            "y": 140
           }
         },
         {
           "id": "w13",
           "a": {
-            "x": 290,
-            "y": 80
+            "x": 400,
+            "y": 220
           },
           "b": {
-            "x": 330,
-            "y": 80
+            "x": 440,
+            "y": 220
           }
         },
         {
           "id": "w14",
           "a": {
-            "x": 330,
-            "y": 80
+            "x": 250,
+            "y": 200
           },
           "b": {
-            "x": 330,
-            "y": 270
+            "x": 280,
+            "y": 200
           }
         },
         {
           "id": "w15",
           "a": {
-            "x": 330,
-            "y": 80
+            "x": 280,
+            "y": 200
           },
           "b": {
-            "x": 400,
-            "y": 80
+            "x": 280,
+            "y": 300
           }
         },
         {
           "id": "w16",
           "a": {
-            "x": 330,
-            "y": 270
+            "x": 280,
+            "y": 300
           },
           "b": {
-            "x": 400,
-            "y": 270
+            "x": 530,
+            "y": 300
           }
         },
         {
           "id": "w17",
           "a": {
-            "x": 290,
-            "y": 220
+            "x": 530,
+            "y": 250
           },
           "b": {
-            "x": 480,
-            "y": 220
+            "x": 530,
+            "y": 300
           }
         },
         {
           "id": "w18",
           "a": {
-            "x": 480,
-            "y": 220
+            "x": 530,
+            "y": 250
           },
           "b": {
-            "x": 480,
-            "y": 230
+            "x": 560,
+            "y": 250
           }
         },
         {
           "id": "w19",
           "a": {
-            "x": 480,
+            "x": 490,
             "y": 230
           },
           "b": {
-            "x": 520,
+            "x": 560,
             "y": 230
           }
         },
         {
           "id": "w20",
           "a": {
-            "x": 450,
-            "y": 280
+            "x": 490,
+            "y": 130
           },
           "b": {
-            "x": 490,
-            "y": 280
+            "x": 580,
+            "y": 130
           }
         },
         {
           "id": "w21",
           "a": {
-            "x": 490,
-            "y": 250
-          },
-          "b": {
-            "x": 490,
-            "y": 280
-          }
-        },
-        {
-          "id": "w22",
-          "a": {
-            "x": 490,
-            "y": 250
-          },
-          "b": {
-            "x": 520,
-            "y": 250
-          }
-        },
-        {
-          "id": "w23",
-          "a": {
-            "x": 450,
-            "y": 90
-          },
-          "b": {
-            "x": 520,
-            "y": 90
-          }
-        },
-        {
-          "id": "w24",
-          "a": {
-            "x": 570,
+            "x": 610,
             "y": 240
           },
           "b": {
-            "x": 630,
+            "x": 660,
             "y": 240
           }
         }

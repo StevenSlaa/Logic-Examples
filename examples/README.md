@@ -27,7 +27,8 @@ Adding numbers with gates, one binary column at a time.
 | --- | --- |
 | [1. Half adder](half-adder) | Adds two single bits. |
 | [2. Full adder](full-adder) | Adds two bits plus a carry from the column before. |
-| [3. Adding 4-bit numbers](four-bit-adder) | The Adder part on 4-bit buses, with a hex display and the carry out. |
+| [3. A 4-bit adder, wire by wire](four-bit-adder-wired) | Four full adders on one sheet, every bit its own pin and every carry a wire you can follow. |
+| [4. Adding 4-bit numbers](four-bit-adder) | The Adder part on 4-bit buses, with a hex display and the carry out. |
 
 ### Choosing and routing
 
