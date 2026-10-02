@@ -29,6 +29,7 @@ Adding numbers with gates, one binary column at a time.
 | [2. Full adder](full-adder) | Adds two bits plus a carry from the column before. |
 | [3. A 4-bit adder, wire by wire](four-bit-adder-wired) | Four full adders on one sheet, every bit its own pin and every carry a wire you can follow. |
 | [4. Adding 4-bit numbers](four-bit-adder) | The Adder part on 4-bit buses, with a hex display and the carry out. |
+| [5. Multiplying two numbers](two-bit-multiplier) | Multiplies two 2-bit numbers with AND gates and two half adders: long multiplication from school, done in binary. |
 
 ### Choosing and routing
 
@@ -49,6 +50,9 @@ Circuits that remember, and circuits that move on with a clock.
 | [2. D flip-flop: remembering on a clock edge](d-flip-flop) | Copies its input only at the instant the clock rises. |
 | [3. Counter and hex display](counter-hex) | A clock drives a 4-bit counter, shown on a hex digit, with a clear button and a carry LED. |
 | [4. Traffic light: a state machine](traffic-light) | A counter walks through four phases and a decoder with two OR gates turns each phase into lamps. |
+| [5. Random numbers from a shift register](random-numbers) | Four flip-flops and one XNOR gate produce a jumbled sequence of 15 numbers: a linear-feedback shift register, the classic hardware random number source. |
+| [6. Edge detector](edge-detector) | A flip-flop remembers what the button was one tick ago, so one gate can turn a long press into a single one-tick pulse. |
+| [7. Running light](running-light) | A Johnson counter feeds its last bit back upside down, and eight AND gates turn its states into one light running down a column. |
 
 ### Projects
 

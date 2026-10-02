@@ -1,0 +1,14 @@
+{
+  "id": "running-light",
+  "title": "7. Running light",
+  "description": "A Johnson counter feeds its last bit back upside down, and eight AND gates turn its states into one light running down a column.",
+  "author": "Steven Slaa",
+  "group": "Memory and time",
+  "order": 7,
+  "tags": [
+    "sequential",
+    "counter",
+    "decoding"
+  ],
+  "entry": "running-light.logic.json"
+}

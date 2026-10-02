@@ -220,7 +220,31 @@
       "readme": {
         "path": "README.md",
         "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/four-bit-adder/README.md",
-        "sha256": "9fdc9e7bc84f390f5c2144315940c6986b0d415e0e7204801ea3906a4d69c93e",
+        "sha256": "e8a4570b47a5a965a3138352d2399e4cd68999508676cbe7522a3095824b6c97",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "two-bit-multiplier",
+      "title": "5. Multiplying two numbers",
+      "description": "Multiplies two 2-bit numbers with AND gates and two half adders: long multiplication from school, done in binary.",
+      "author": "Steven Slaa",
+      "group": "Arithmetic",
+      "tags": [
+        "combinational",
+        "arithmetic"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/two-bit-multiplier",
+      "circuit": {
+        "path": "two-bit-multiplier.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/two-bit-multiplier/two-bit-multiplier.logic.json",
+        "sha256": "055b7ee84616abf789382a557a0f98f4feec263709a4daa5c46057c2ff2d90fe",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/two-bit-multiplier/README.md",
+        "sha256": "dff67e2e425cf671e68c9bd5f4e9f510287f0cb0eaca9f3e96ff65817920c0f6",
         "mime": "text/markdown"
       }
     },
@@ -367,7 +391,82 @@
       "readme": {
         "path": "README.md",
         "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/traffic-light/README.md",
-        "sha256": "66873b6d3277e9f956ff9ff167f0b2cf4d034b696450d02960bd274267de4b31",
+        "sha256": "df7e15f1cc82194cd4786c527b966e6be7f158a48d0879223fd81de769b51da5",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "random-numbers",
+      "title": "5. Random numbers from a shift register",
+      "description": "Four flip-flops and one XNOR gate produce a jumbled sequence of 15 numbers: a linear-feedback shift register, the classic hardware random number source.",
+      "author": "Steven Slaa",
+      "group": "Memory and time",
+      "tags": [
+        "sequential",
+        "shift register",
+        "random"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/random-numbers",
+      "circuit": {
+        "path": "random-numbers.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/random-numbers/random-numbers.logic.json",
+        "sha256": "bdf026cc9d4966a39523236648466ea1e124536dbc3bca16bf9a044c0b53fba6",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/random-numbers/README.md",
+        "sha256": "00ae0d25e2aa6d367962ca357dec880b8e8e5e9d010a2fbab7c8cd8d7d93bbb2",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "edge-detector",
+      "title": "6. Edge detector",
+      "description": "A flip-flop remembers what the button was one tick ago, so one gate can turn a long press into a single one-tick pulse.",
+      "author": "Steven Slaa",
+      "group": "Memory and time",
+      "tags": [
+        "sequential",
+        "flip-flop",
+        "timing"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/edge-detector",
+      "circuit": {
+        "path": "edge-detector.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/edge-detector/edge-detector.logic.json",
+        "sha256": "dae5c3083eead0f6679ff2caf3b569fd23898c34a17afffe41828fd103003fe3",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/edge-detector/README.md",
+        "sha256": "16b7aad61b10e7d8ee826755c9efa80d59a26c2c1ecc3741e706c41cb5972fb5",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "running-light",
+      "title": "7. Running light",
+      "description": "A Johnson counter feeds its last bit back upside down, and eight AND gates turn its states into one light running down a column.",
+      "author": "Steven Slaa",
+      "group": "Memory and time",
+      "tags": [
+        "sequential",
+        "counter",
+        "decoding"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/running-light",
+      "circuit": {
+        "path": "running-light.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/running-light/running-light.logic.json",
+        "sha256": "d868e84f02ed5a9c8d1c254df8e74da2bff27e6786681de9534555dbf6ed8fca",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/running-light/README.md",
+        "sha256": "f1924a2b75648257ff5a496e360f2abf2a9c38f938431cbbbd87ddfdf9c956a4",
         "mime": "text/markdown"
       }
     },

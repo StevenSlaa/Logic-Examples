@@ -1,0 +1,14 @@
+{
+  "id": "edge-detector",
+  "title": "6. Edge detector",
+  "description": "A flip-flop remembers what the button was one tick ago, so one gate can turn a long press into a single one-tick pulse.",
+  "author": "Steven Slaa",
+  "group": "Memory and time",
+  "order": 6,
+  "tags": [
+    "sequential",
+    "flip-flop",
+    "timing"
+  ],
+  "entry": "edge-detector.logic.json"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "random-numbers",
+  "title": "5. Random numbers from a shift register",
+  "description": "Four flip-flops and one XNOR gate produce a jumbled sequence of 15 numbers: a linear-feedback shift register, the classic hardware random number source.",
+  "author": "Steven Slaa",
+  "group": "Memory and time",
+  "order": 5,
+  "tags": [
+    "sequential",
+    "shift register",
+    "random"
+  ],
+  "entry": "random-numbers.logic.json"
+}

@@ -98,5 +98,5 @@ the state, is the shape of every state machine, however large.
 
 ## Next
 
-That is the end of the core course. The **Projects** group puts it all together, starting with
-the [Ripple-carry adder](../ripple-carry-adder): a 4-bit adder built from nothing but gates.
+[Random numbers from a shift register](../random-numbers): four flip-flops and one gate that
+produce a jumbled sequence of 15 numbers.

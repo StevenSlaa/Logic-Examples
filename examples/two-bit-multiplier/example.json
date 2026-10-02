@@ -1,0 +1,13 @@
+{
+  "id": "two-bit-multiplier",
+  "title": "5. Multiplying two numbers",
+  "description": "Multiplies two 2-bit numbers with AND gates and two half adders: long multiplication from school, done in binary.",
+  "author": "Steven Slaa",
+  "group": "Arithmetic",
+  "order": 5,
+  "tags": [
+    "combinational",
+    "arithmetic"
+  ],
+  "entry": "two-bit-multiplier.logic.json"
+}

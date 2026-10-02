@@ -86,4 +86,5 @@ part with its lid off.
 
 ## Next
 
-On to **Choosing and routing**, starting with the [Multiplexer](../mux-from-gates).
+[Multiplying two numbers](../two-bit-multiplier): AND gates and half adders doing long
+multiplication in binary.

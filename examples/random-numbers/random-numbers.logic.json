@@ -1,0 +1,626 @@
+{
+  "schemaVersion": 2,
+  "id": "example-random-numbers",
+  "name": "Random numbers from a shift register",
+  "createdAt": "2026-10-02T00:00:00.000Z",
+  "updatedAt": "2026-10-02T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "ff0",
+          "type": "dff",
+          "label": "Q0",
+          "position": {
+            "x": 200,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff1",
+          "type": "dff",
+          "label": "Q1",
+          "position": {
+            "x": 300,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff2",
+          "type": "dff",
+          "label": "Q2",
+          "position": {
+            "x": 400,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff3",
+          "type": "dff",
+          "label": "Q3",
+          "position": {
+            "x": 500,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "fb",
+          "type": "xnor",
+          "label": "feedback",
+          "position": {
+            "x": 90,
+            "y": 10
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "clk",
+          "type": "clock",
+          "label": "CLOCK",
+          "position": {
+            "x": 60,
+            "y": 180
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "divide": 1
+          }
+        },
+        {
+          "id": "led0",
+          "type": "led",
+          "label": "Q0",
+          "position": {
+            "x": 250,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "led1",
+          "type": "led",
+          "label": "Q1",
+          "position": {
+            "x": 350,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "led2",
+          "type": "led",
+          "label": "Q2",
+          "position": {
+            "x": 450,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "led3",
+          "type": "led",
+          "label": "Q3",
+          "position": {
+            "x": 550,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "green"
+          }
+        },
+        {
+          "id": "join",
+          "type": "splitter",
+          "label": "",
+          "position": {
+            "x": 640,
+            "y": 300
+          },
+          "rotation": 0,
+          "mirrored": true,
+          "attributes": {
+            "width": 4,
+            "fanout": 4
+          }
+        },
+        {
+          "id": "hex",
+          "type": "hex-display",
+          "label": "number",
+          "position": {
+            "x": 720,
+            "y": 280
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 200,
+            "y": 400
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Press play: on every clock tick the bits shift one place\nright, and Q2 XNOR Q3 drops in at Q0.\n\nThe digit runs through 15 different numbers in a jumbled\norder before it repeats. It never shows F.",
+            "color": "green"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 240,
+            "y": 110
+          },
+          "b": {
+            "x": 300,
+            "y": 110
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 340,
+            "y": 110
+          },
+          "b": {
+            "x": 400,
+            "y": 110
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 440,
+            "y": 110
+          },
+          "b": {
+            "x": 500,
+            "y": 110
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 140,
+            "y": 30
+          },
+          "b": {
+            "x": 170,
+            "y": 30
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 170,
+            "y": 30
+          },
+          "b": {
+            "x": 170,
+            "y": 110
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 170,
+            "y": 110
+          },
+          "b": {
+            "x": 200,
+            "y": 110
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 540,
+            "y": 110
+          },
+          "b": {
+            "x": 560,
+            "y": 110
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 560,
+            "y": 110
+          },
+          "b": {
+            "x": 560,
+            "y": 0
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 560,
+            "y": 0
+          },
+          "b": {
+            "x": 70,
+            "y": 0
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 70,
+            "y": 0
+          },
+          "b": {
+            "x": 70,
+            "y": 20
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 70,
+            "y": 20
+          },
+          "b": {
+            "x": 90,
+            "y": 20
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 470,
+            "y": 110
+          },
+          "b": {
+            "x": 470,
+            "y": 60
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 470,
+            "y": 60
+          },
+          "b": {
+            "x": 80,
+            "y": 60
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 80,
+            "y": 60
+          },
+          "b": {
+            "x": 80,
+            "y": 40
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 80,
+            "y": 40
+          },
+          "b": {
+            "x": 90,
+            "y": 40
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 90,
+            "y": 190
+          },
+          "b": {
+            "x": 490,
+            "y": 190
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 200,
+            "y": 130
+          },
+          "b": {
+            "x": 190,
+            "y": 130
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 190,
+            "y": 130
+          },
+          "b": {
+            "x": 190,
+            "y": 190
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 300,
+            "y": 130
+          },
+          "b": {
+            "x": 290,
+            "y": 130
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 290,
+            "y": 130
+          },
+          "b": {
+            "x": 290,
+            "y": 190
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 400,
+            "y": 130
+          },
+          "b": {
+            "x": 390,
+            "y": 130
+          }
+        },
+        {
+          "id": "w22",
+          "a": {
+            "x": 390,
+            "y": 130
+          },
+          "b": {
+            "x": 390,
+            "y": 190
+          }
+        },
+        {
+          "id": "w23",
+          "a": {
+            "x": 500,
+            "y": 130
+          },
+          "b": {
+            "x": 490,
+            "y": 130
+          }
+        },
+        {
+          "id": "w24",
+          "a": {
+            "x": 490,
+            "y": 130
+          },
+          "b": {
+            "x": 490,
+            "y": 190
+          }
+        },
+        {
+          "id": "w25",
+          "a": {
+            "x": 250,
+            "y": 110
+          },
+          "b": {
+            "x": 250,
+            "y": 250
+          }
+        },
+        {
+          "id": "w26",
+          "a": {
+            "x": 250,
+            "y": 250
+          },
+          "b": {
+            "x": 250,
+            "y": 310
+          }
+        },
+        {
+          "id": "w27",
+          "a": {
+            "x": 250,
+            "y": 310
+          },
+          "b": {
+            "x": 640,
+            "y": 310
+          }
+        },
+        {
+          "id": "w28",
+          "a": {
+            "x": 350,
+            "y": 110
+          },
+          "b": {
+            "x": 350,
+            "y": 250
+          }
+        },
+        {
+          "id": "w29",
+          "a": {
+            "x": 350,
+            "y": 250
+          },
+          "b": {
+            "x": 350,
+            "y": 320
+          }
+        },
+        {
+          "id": "w30",
+          "a": {
+            "x": 350,
+            "y": 320
+          },
+          "b": {
+            "x": 640,
+            "y": 320
+          }
+        },
+        {
+          "id": "w31",
+          "a": {
+            "x": 450,
+            "y": 110
+          },
+          "b": {
+            "x": 450,
+            "y": 250
+          }
+        },
+        {
+          "id": "w32",
+          "a": {
+            "x": 450,
+            "y": 250
+          },
+          "b": {
+            "x": 450,
+            "y": 330
+          }
+        },
+        {
+          "id": "w33",
+          "a": {
+            "x": 450,
+            "y": 330
+          },
+          "b": {
+            "x": 640,
+            "y": 330
+          }
+        },
+        {
+          "id": "w34",
+          "a": {
+            "x": 550,
+            "y": 110
+          },
+          "b": {
+            "x": 550,
+            "y": 250
+          }
+        },
+        {
+          "id": "w35",
+          "a": {
+            "x": 550,
+            "y": 250
+          },
+          "b": {
+            "x": 550,
+            "y": 340
+          }
+        },
+        {
+          "id": "w36",
+          "a": {
+            "x": 550,
+            "y": 340
+          },
+          "b": {
+            "x": 640,
+            "y": 340
+          }
+        },
+        {
+          "id": "w37",
+          "a": {
+            "x": 540,
+            "y": 110
+          },
+          "b": {
+            "x": 560,
+            "y": 110
+          }
+        },
+        {
+          "id": "w38",
+          "a": {
+            "x": 660,
+            "y": 310
+          },
+          "b": {
+            "x": 720,
+            "y": 310
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": true,
+    "tickFrequency": 4,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}

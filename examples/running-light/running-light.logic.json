@@ -1,0 +1,936 @@
+{
+  "schemaVersion": 2,
+  "id": "example-running-light",
+  "name": "Running light",
+  "createdAt": "2026-10-02T00:00:00.000Z",
+  "updatedAt": "2026-10-02T00:00:00.000Z",
+  "activeCircuitId": "main",
+  "circuits": [
+    {
+      "id": "main",
+      "name": "main",
+      "components": [
+        {
+          "id": "ff0",
+          "type": "dff",
+          "label": "Q0",
+          "position": {
+            "x": 200,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff1",
+          "type": "dff",
+          "label": "Q1",
+          "position": {
+            "x": 320,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff2",
+          "type": "dff",
+          "label": "Q2",
+          "position": {
+            "x": 440,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "ff3",
+          "type": "dff",
+          "label": "Q3",
+          "position": {
+            "x": 560,
+            "y": 100
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {}
+        },
+        {
+          "id": "clk",
+          "type": "clock",
+          "label": "CLOCK",
+          "position": {
+            "x": 60,
+            "y": 170
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "divide": 1
+          }
+        },
+        {
+          "id": "g0",
+          "type": "and",
+          "label": "¬Q0 ¬Q3",
+          "position": {
+            "x": 760,
+            "y": 230
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "led0",
+          "type": "led",
+          "label": "0",
+          "position": {
+            "x": 860,
+            "y": 240
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "g1",
+          "type": "and",
+          "label": "Q0 ¬Q1",
+          "position": {
+            "x": 760,
+            "y": 290
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "led1",
+          "type": "led",
+          "label": "1",
+          "position": {
+            "x": 860,
+            "y": 300
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "g2",
+          "type": "and",
+          "label": "Q1 ¬Q2",
+          "position": {
+            "x": 760,
+            "y": 350
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "led2",
+          "type": "led",
+          "label": "2",
+          "position": {
+            "x": 860,
+            "y": 360
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "g3",
+          "type": "and",
+          "label": "Q2 ¬Q3",
+          "position": {
+            "x": 760,
+            "y": 410
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "led3",
+          "type": "led",
+          "label": "3",
+          "position": {
+            "x": 860,
+            "y": 420
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "g4",
+          "type": "and",
+          "label": "Q3 Q0",
+          "position": {
+            "x": 760,
+            "y": 470
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "led4",
+          "type": "led",
+          "label": "4",
+          "position": {
+            "x": 860,
+            "y": 480
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "g5",
+          "type": "and",
+          "label": "¬Q0 Q1",
+          "position": {
+            "x": 760,
+            "y": 530
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "led5",
+          "type": "led",
+          "label": "5",
+          "position": {
+            "x": 860,
+            "y": 540
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "g6",
+          "type": "and",
+          "label": "¬Q1 Q2",
+          "position": {
+            "x": 760,
+            "y": 590
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "led6",
+          "type": "led",
+          "label": "6",
+          "position": {
+            "x": 860,
+            "y": 600
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "g7",
+          "type": "and",
+          "label": "¬Q2 Q3",
+          "position": {
+            "x": 760,
+            "y": 650
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "inputs": 2,
+            "width": 1
+          }
+        },
+        {
+          "id": "led7",
+          "type": "led",
+          "label": "7",
+          "position": {
+            "x": 860,
+            "y": 660
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "color": "red"
+          }
+        },
+        {
+          "id": "note",
+          "type": "note",
+          "label": "",
+          "position": {
+            "x": 200,
+            "y": 730
+          },
+          "rotation": 0,
+          "mirrored": false,
+          "attributes": {
+            "text": "Press play. Four flip-flops pass a bit along, and the last one\nfeeds its opposite back to the first: 8 states, then repeat.\n\nEach AND gate spots one state from just two neighbouring bits,\nso a single light runs down the column on the right.",
+            "color": "pink"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "id": "w1",
+          "a": {
+            "x": 240,
+            "y": 110
+          },
+          "b": {
+            "x": 320,
+            "y": 110
+          }
+        },
+        {
+          "id": "w2",
+          "a": {
+            "x": 360,
+            "y": 110
+          },
+          "b": {
+            "x": 440,
+            "y": 110
+          }
+        },
+        {
+          "id": "w3",
+          "a": {
+            "x": 480,
+            "y": 110
+          },
+          "b": {
+            "x": 560,
+            "y": 110
+          }
+        },
+        {
+          "id": "w4",
+          "a": {
+            "x": 600,
+            "y": 130
+          },
+          "b": {
+            "x": 640,
+            "y": 130
+          }
+        },
+        {
+          "id": "w5",
+          "a": {
+            "x": 640,
+            "y": 130
+          },
+          "b": {
+            "x": 640,
+            "y": 60
+          }
+        },
+        {
+          "id": "w6",
+          "a": {
+            "x": 640,
+            "y": 60
+          },
+          "b": {
+            "x": 180,
+            "y": 60
+          }
+        },
+        {
+          "id": "w7",
+          "a": {
+            "x": 180,
+            "y": 60
+          },
+          "b": {
+            "x": 180,
+            "y": 110
+          }
+        },
+        {
+          "id": "w8",
+          "a": {
+            "x": 180,
+            "y": 110
+          },
+          "b": {
+            "x": 200,
+            "y": 110
+          }
+        },
+        {
+          "id": "w9",
+          "a": {
+            "x": 90,
+            "y": 180
+          },
+          "b": {
+            "x": 550,
+            "y": 180
+          }
+        },
+        {
+          "id": "w10",
+          "a": {
+            "x": 200,
+            "y": 130
+          },
+          "b": {
+            "x": 190,
+            "y": 130
+          }
+        },
+        {
+          "id": "w11",
+          "a": {
+            "x": 190,
+            "y": 130
+          },
+          "b": {
+            "x": 190,
+            "y": 180
+          }
+        },
+        {
+          "id": "w12",
+          "a": {
+            "x": 320,
+            "y": 130
+          },
+          "b": {
+            "x": 310,
+            "y": 130
+          }
+        },
+        {
+          "id": "w13",
+          "a": {
+            "x": 310,
+            "y": 130
+          },
+          "b": {
+            "x": 310,
+            "y": 180
+          }
+        },
+        {
+          "id": "w14",
+          "a": {
+            "x": 440,
+            "y": 130
+          },
+          "b": {
+            "x": 430,
+            "y": 130
+          }
+        },
+        {
+          "id": "w15",
+          "a": {
+            "x": 430,
+            "y": 130
+          },
+          "b": {
+            "x": 430,
+            "y": 180
+          }
+        },
+        {
+          "id": "w16",
+          "a": {
+            "x": 560,
+            "y": 130
+          },
+          "b": {
+            "x": 550,
+            "y": 130
+          }
+        },
+        {
+          "id": "w17",
+          "a": {
+            "x": 550,
+            "y": 130
+          },
+          "b": {
+            "x": 550,
+            "y": 180
+          }
+        },
+        {
+          "id": "w18",
+          "a": {
+            "x": 810,
+            "y": 250
+          },
+          "b": {
+            "x": 860,
+            "y": 250
+          }
+        },
+        {
+          "id": "w19",
+          "a": {
+            "x": 810,
+            "y": 310
+          },
+          "b": {
+            "x": 860,
+            "y": 310
+          }
+        },
+        {
+          "id": "w20",
+          "a": {
+            "x": 810,
+            "y": 370
+          },
+          "b": {
+            "x": 860,
+            "y": 370
+          }
+        },
+        {
+          "id": "w21",
+          "a": {
+            "x": 810,
+            "y": 430
+          },
+          "b": {
+            "x": 860,
+            "y": 430
+          }
+        },
+        {
+          "id": "w22",
+          "a": {
+            "x": 810,
+            "y": 490
+          },
+          "b": {
+            "x": 860,
+            "y": 490
+          }
+        },
+        {
+          "id": "w23",
+          "a": {
+            "x": 810,
+            "y": 550
+          },
+          "b": {
+            "x": 860,
+            "y": 550
+          }
+        },
+        {
+          "id": "w24",
+          "a": {
+            "x": 810,
+            "y": 610
+          },
+          "b": {
+            "x": 860,
+            "y": 610
+          }
+        },
+        {
+          "id": "w25",
+          "a": {
+            "x": 810,
+            "y": 670
+          },
+          "b": {
+            "x": 860,
+            "y": 670
+          }
+        },
+        {
+          "id": "w26",
+          "a": {
+            "x": 240,
+            "y": 110
+          },
+          "b": {
+            "x": 260,
+            "y": 110
+          }
+        },
+        {
+          "id": "w27",
+          "a": {
+            "x": 260,
+            "y": 110
+          },
+          "b": {
+            "x": 260,
+            "y": 500
+          }
+        },
+        {
+          "id": "w28",
+          "a": {
+            "x": 260,
+            "y": 300
+          },
+          "b": {
+            "x": 760,
+            "y": 300
+          }
+        },
+        {
+          "id": "w29",
+          "a": {
+            "x": 260,
+            "y": 500
+          },
+          "b": {
+            "x": 760,
+            "y": 500
+          }
+        },
+        {
+          "id": "w30",
+          "a": {
+            "x": 240,
+            "y": 130
+          },
+          "b": {
+            "x": 240,
+            "y": 540
+          }
+        },
+        {
+          "id": "w31",
+          "a": {
+            "x": 240,
+            "y": 240
+          },
+          "b": {
+            "x": 760,
+            "y": 240
+          }
+        },
+        {
+          "id": "w32",
+          "a": {
+            "x": 240,
+            "y": 540
+          },
+          "b": {
+            "x": 760,
+            "y": 540
+          }
+        },
+        {
+          "id": "w33",
+          "a": {
+            "x": 360,
+            "y": 110
+          },
+          "b": {
+            "x": 380,
+            "y": 110
+          }
+        },
+        {
+          "id": "w34",
+          "a": {
+            "x": 380,
+            "y": 110
+          },
+          "b": {
+            "x": 380,
+            "y": 560
+          }
+        },
+        {
+          "id": "w35",
+          "a": {
+            "x": 380,
+            "y": 360
+          },
+          "b": {
+            "x": 760,
+            "y": 360
+          }
+        },
+        {
+          "id": "w36",
+          "a": {
+            "x": 380,
+            "y": 560
+          },
+          "b": {
+            "x": 760,
+            "y": 560
+          }
+        },
+        {
+          "id": "w37",
+          "a": {
+            "x": 360,
+            "y": 130
+          },
+          "b": {
+            "x": 360,
+            "y": 600
+          }
+        },
+        {
+          "id": "w38",
+          "a": {
+            "x": 360,
+            "y": 320
+          },
+          "b": {
+            "x": 760,
+            "y": 320
+          }
+        },
+        {
+          "id": "w39",
+          "a": {
+            "x": 360,
+            "y": 600
+          },
+          "b": {
+            "x": 760,
+            "y": 600
+          }
+        },
+        {
+          "id": "w40",
+          "a": {
+            "x": 480,
+            "y": 110
+          },
+          "b": {
+            "x": 500,
+            "y": 110
+          }
+        },
+        {
+          "id": "w41",
+          "a": {
+            "x": 500,
+            "y": 110
+          },
+          "b": {
+            "x": 500,
+            "y": 620
+          }
+        },
+        {
+          "id": "w42",
+          "a": {
+            "x": 500,
+            "y": 420
+          },
+          "b": {
+            "x": 760,
+            "y": 420
+          }
+        },
+        {
+          "id": "w43",
+          "a": {
+            "x": 500,
+            "y": 620
+          },
+          "b": {
+            "x": 760,
+            "y": 620
+          }
+        },
+        {
+          "id": "w44",
+          "a": {
+            "x": 480,
+            "y": 130
+          },
+          "b": {
+            "x": 480,
+            "y": 660
+          }
+        },
+        {
+          "id": "w45",
+          "a": {
+            "x": 480,
+            "y": 380
+          },
+          "b": {
+            "x": 760,
+            "y": 380
+          }
+        },
+        {
+          "id": "w46",
+          "a": {
+            "x": 480,
+            "y": 660
+          },
+          "b": {
+            "x": 760,
+            "y": 660
+          }
+        },
+        {
+          "id": "w47",
+          "a": {
+            "x": 600,
+            "y": 110
+          },
+          "b": {
+            "x": 620,
+            "y": 110
+          }
+        },
+        {
+          "id": "w48",
+          "a": {
+            "x": 600,
+            "y": 110
+          },
+          "b": {
+            "x": 620,
+            "y": 110
+          }
+        },
+        {
+          "id": "w49",
+          "a": {
+            "x": 620,
+            "y": 110
+          },
+          "b": {
+            "x": 620,
+            "y": 680
+          }
+        },
+        {
+          "id": "w50",
+          "a": {
+            "x": 620,
+            "y": 480
+          },
+          "b": {
+            "x": 760,
+            "y": 480
+          }
+        },
+        {
+          "id": "w51",
+          "a": {
+            "x": 620,
+            "y": 680
+          },
+          "b": {
+            "x": 760,
+            "y": 680
+          }
+        },
+        {
+          "id": "w52",
+          "a": {
+            "x": 600,
+            "y": 130
+          },
+          "b": {
+            "x": 600,
+            "y": 440
+          }
+        },
+        {
+          "id": "w53",
+          "a": {
+            "x": 600,
+            "y": 260
+          },
+          "b": {
+            "x": 760,
+            "y": 260
+          }
+        },
+        {
+          "id": "w54",
+          "a": {
+            "x": 600,
+            "y": 440
+          },
+          "b": {
+            "x": 760,
+            "y": 440
+          }
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    }
+  ],
+  "simulation": {
+    "enabled": true,
+    "autoTick": true,
+    "tickFrequency": 6,
+    "iterationLimit": 100
+  },
+  "options": {
+    "gridSize": 10,
+    "showGrid": true
+  }
+}
