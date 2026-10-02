@@ -519,7 +519,32 @@
       "readme": {
         "path": "README.md",
         "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/dice/README.md",
-        "sha256": "55119095f7d57162046257581025cf54a6175f4873412a655de16fe3eb6601d7",
+        "sha256": "fb186f6c842985d8677caf699082dbdef746c70682a39cd3a7bd5721f6490caa",
+        "mime": "text/markdown"
+      }
+    },
+    {
+      "id": "tiny-cpu",
+      "title": "7. A tiny CPU from gates",
+      "description": "A working 4-bit computer, 74 gates and 11 flip-flops, every wire drawn. It runs a program stored in a ROM made of gates.",
+      "author": "Steven Slaa",
+      "group": "Projects",
+      "tags": [
+        "sequential",
+        "cpu",
+        "arithmetic"
+      ],
+      "source": "https://github.com/StevenSlaa/Logic-Examples/tree/main/examples/tiny-cpu",
+      "circuit": {
+        "path": "tiny-cpu.logic.json",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/tiny-cpu/tiny-cpu.logic.json",
+        "sha256": "7a2811b0e78df596794b006e35e52a90de273f628cd339efde48b5cac6f6b991",
+        "mime": "application/json"
+      },
+      "readme": {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/StevenSlaa/Logic-Examples/refs/heads/main/examples/tiny-cpu/README.md",
+        "sha256": "389a50bc100d43170d48be6a8da72c5584a562a41c2c24acbc3ecc7a3345c3c5",
         "mime": "text/markdown"
       }
     }

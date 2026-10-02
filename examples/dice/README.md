@@ -115,6 +115,5 @@ to press start, and used that count as their random seed.
 
 ## Next
 
-This is the last example in the course. You now have everything you need to design your own:
-a reaction timer, a stopwatch with hex digits, or a 4-bit computer with a program counter, the
-ALU and a RAM.
+[A tiny CPU from gates](../tiny-cpu): a working 4-bit computer, with a program counter, a ROM
+and an accumulator, every wire drawn.

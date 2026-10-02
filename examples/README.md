@@ -62,6 +62,7 @@ Bigger circuits that combine everything before them. Each is a small machine: ta
 | [4. Sequence detector: a finite-state machine](sequence-detector) | Watches a stream of bits and lights up when it has just seen 1, 0, 1. |
 | [5. Accumulator: a register that adds](accumulator) | An 8-bit register feeding its own adder keeps a running total. |
 | [6. Electronic dice](dice) | A fast counter stopped by a button picks a number from 1 to 6, and gate logic lights the right dots on a die face. |
+| [7. A tiny CPU from gates](tiny-cpu) | A working 4-bit computer, 74 gates and 11 flip-flops, every wire drawn. |
 <!-- generated:end -->
 
 ## Words used throughout
